@@ -7,8 +7,39 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperException.cs" caret="117" fromTop="4" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="168" fromTop="6" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="489" fromTop="1" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosSpecs.cs" caret="334" fromTop="10" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="27" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="2631" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="1" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="14" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="4" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="13" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="10" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="9" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="9" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosSpecs.cs" caret="716" fromTop="16" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="18" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosSpecs.cs" caret="321" fromTop="11" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1206" fromTop="6" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperException.cs" caret="229" fromTop="8" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1189" fromTop="17" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="48" fromTop="0" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="2324" fromTop="19" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperException.cs" caret="162" fromTop="4" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="485" fromTop="9" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="411" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="168" fromTop="6" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="863" fromTop="20" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1270" fromTop="21" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosSpecs.cs" caret="651" fromTop="18" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosSpecs.cs" caret="13" fromTop="0" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -21,4 +52,150 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="const" priority="2" />
+      <Item value="string" priority="10" />
+      <Item value="typeof" priority="0" />
+      <Item value="MorningStarRatioScraperSpecs`0" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="It`0" priority="1" />
+      <Item value="Because`0" priority="0" />
+      <Item value="__ProtectAttribute`0" priority="0" />
+      <Item value="results" priority="6" />
+      <Item value="static" priority="0" />
+      <Item value="foo" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="new" priority="15" />
+      <Item value="MorningStarKeyRatios`0" priority="0" />
+      <Item value="dynamic" priority="6" />
+      <Item value="doc" priority="8" />
+      <Item value="HtmlDocument`0" priority="0" />
+      <Item value="client" priority="2" />
+      <Item value="String`0" priority="2" />
+      <Item value="UrlFormat" priority="0" />
+      <Item value="tickerSymbol" priority="2" />
+      <Item value="var" priority="11" />
+      <Item value="Uri`0" priority="0" />
+      <Item value="WebRequest`0" priority="0" />
+      <Item value="url" priority="4" />
+      <Item value="request" priority="0" />
+      <Item value="response" priority="0" />
+      <Item value="using" priority="1" />
+      <Item value="stream" priority="1" />
+      <Item value="node" priority="0" />
+      <Item value="ExpandoObject" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="in" priority="0" />
+      <Item value="financials" priority="0" />
+      <Item value="tr" priority="1" />
+      <Item value="name" priority="0" />
+      <Item value="value" priority="2" />
+      <Item value="throw" priority="2" />
+      <Item value="AggregateException" priority="0" />
+      <Item value="true" priority="1" />
+      <Item value="Exception" priority="1" />
+      <Item value="WebClient`0" priority="2" />
+      <Item value="HtmlAgilityPack" priority="0" />
+      <Item value="HtmlWeb`0" priority="1" />
+      <Item value="Newtonsoft" priority="0" />
+      <Item value="Json" priority="0" />
+      <Item value="JsonReader`0" priority="0" />
+      <Item value="JsonTextReader`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="json" priority="0" />
+      <Item value="o" priority="1" />
+      <Item value="if" priority="1" />
+      <Item value="th" priority="0" />
+      <Item value="HtmlEntity`0" priority="0" />
+      <Item value="DynamicObject`0" priority="1" />
+      <Item value="Dictionary&lt;string,TValue&gt;" priority="0" />
+      <Item value="ExpandoObject`0" priority="1" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="do" priority="0" />
+      <Item value="return" priority="3" />
+      <Item value="d" priority="0" />
+      <Item value="IDictionary" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="Scrape`0" priority="0" />
+      <Item value="Serializable" priority="0" />
+      <Item value="ScraperException" priority="0" />
+      <Item value="ctor" priority="0" />
+      <Item value="Fundamentals" priority="1" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="0" />
+      <Item value="ScraperResults" priority="0" />
+      <Item value="viewUrl" priority="0" />
+      <Item value="TickerSymbol" priority="0" />
+      <Item value="ScraperException`0" priority="0" />
+      <Item value="Uri" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Single">
+      <Item value="ShouldBeGreaterThan`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.Scrapers.MorningStarKeyRatios">
+      <Item value="GetHashCode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlDocument">
+      <Item value="Load`0" priority="0" />
+      <Item value="DocumentNode" priority="0" />
+      <Item value="GetElementbyId`0" priority="0" />
+      <Item value="ParseErrors" priority="2" />
+      <Item value="OptionUseIdAttribute" priority="0" />
+      <Item value="OptionFixNestedTags" priority="0" />
+      <Item value="LoadHtml`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebClient">
+      <Item value="DownloadString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Net.WebRequest">
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebRequest">
+      <Item value="GetResponse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebResponse">
+      <Item value="GetResponseStream`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlNode">
+      <Item value="SelectSingleNode`0" priority="0" />
+      <Item value="InnerText" priority="2" />
+      <Item value="Elements`0" priority="1" />
+      <Item value="Element`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToSingle`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Any`1" priority="0" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlWeb">
+      <Item value="Load`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Newtonsoft.Json.JsonConvert">
+      <Item value="DeserializeObject`0" priority="0" />
+      <Item value="DeserializeAnonymousType`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ksContent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@HtmlAgilityPack.HtmlEntity">
+      <Item value="DeEntitize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
+      <Item value="ShouldBe`0" priority="0" />
+      <Item value="ShouldNotBeEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.Scrapers.ScraperResults">
+      <Item value="Fundamentals" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

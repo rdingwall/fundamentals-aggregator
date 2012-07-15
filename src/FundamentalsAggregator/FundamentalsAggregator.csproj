@@ -51,6 +51,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrapers\MorningStarKeyRatios.cs" />
+    <Compile Include="Scrapers\ScraperException.cs" />
+    <Compile Include="Scrapers\ScraperResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

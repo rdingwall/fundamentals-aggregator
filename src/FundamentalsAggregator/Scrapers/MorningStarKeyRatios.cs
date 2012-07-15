@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Net;
 using HtmlAgilityPack;
@@ -11,12 +10,31 @@ namespace FundamentalsAggregator.Scrapers
     public class MorningStarKeyRatios
     {
         // Horrific. This returns an HTML string as JSON.
-        const string UrlFormat = "http://financials.morningstar.com/ajax/keystatsAjax.html?t={0}";
+        const string AjaxUrlFormat = "http://financials.morningstar.com/ajax/keystatsAjax.html?t={0}";
+        const string ViewUrlFormat = "http://financials.morningstar.com/ratios/r.html?t={0}";
 
-        public dynamic Get(string tickerSymbol)
+        public ScraperResults GetFundamentals(string tickerSymbol)
         {
-            var url = new Uri(String.Format(UrlFormat, tickerSymbol));
+            var url = new Uri(String.Format(AjaxUrlFormat, tickerSymbol));
 
+            try
+            {
+                return new ScraperResults
+                           {
+                               TickerSymbol = tickerSymbol,
+                               Url = new Uri(String.Format(ViewUrlFormat, tickerSymbol)),
+                               Timestamp = DateTime.UtcNow,
+                               Fundamentals = ScrapeFundamentals(url)
+                           };
+            }
+            catch (Exception e)
+            {
+                throw new ScraperException(String.Format("Error scraping MorningStar Key Ratios from {0}.", url), e);
+            }
+        }
+
+        static IDictionary<string, string> ScrapeFundamentals(Uri url)
+        {
             using (var client = new WebClient())
             {
                 var json = client.DownloadString(url);
@@ -42,6 +60,8 @@ namespace FundamentalsAggregator.Scrapers
                         continue;
 
                     var name = HtmlEntity.DeEntitize(th.InnerText);
+
+                    // Use the latest TTM (furthest left) value.
                     var value = HtmlEntity.DeEntitize(tr.Elements("td").Last().InnerText);
 
                     if (value == "—")
@@ -50,11 +70,8 @@ namespace FundamentalsAggregator.Scrapers
                     results.Add(name, value);
                 }
 
-                dynamic d = new ExpandoObject();
-                d.OperatingMargin = results["Operating Margin %"];
-                return d;
+                return results;
             }
         }
-
     }
 }

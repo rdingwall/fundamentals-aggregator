@@ -9,16 +9,18 @@ namespace FundamentalsAggregator.Specs.Scrapers
     {
         public class When_fetching_the_key_ratios
         {
-            static dynamic results;
+            static ScraperResults results;
 
-            Because of = () => results = new MorningStarKeyRatios().Get("AAPL");
+            Because of = () => results = new MorningStarKeyRatios().GetFundamentals("AAPL");
+
+            It should_include_the_ticker_symbol = () => results.TickerSymbol.ShouldEqual("AAPL");
+
+            It should_include_the_url_to_visit = () => results.Url.ShouldNotBeNull();
+
+            It should_return_some_fundamentals = () => results.Fundamentals.ShouldNotBeEmpty();
 
             It should_return_the_operating_margin =
-                () =>
-                {
-                    float value = Convert.ToSingle(results.OperatingMargin);
-                    value.ShouldBeGreaterThan(0);
-                };
+                () => Convert.ToSingle(results.Fundamentals["Operating Margin %"]).ShouldBeGreaterThan(0);
         }
     }
 }
