@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using FundamentalsAggregator.TickerSymbolFormatters;
@@ -16,6 +17,11 @@ namespace FundamentalsAggregator.Scrapers
             new FtDotComFormatter();
 
         const string UrlFormat = "http://markets.ft.com/Research/Markets/Tearsheets/Financials?s={0}";
+
+        public string ProviderName
+        {
+            get { return "FT.com (financials)"; }
+        }
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
@@ -40,7 +46,9 @@ namespace FundamentalsAggregator.Scrapers
             var trs = doc.DocumentNode.SelectNodes("//div[@class='chartTable']/table/tr");
 
             if (trs == null)
-                return new ScraperResults(symbol, url, fundamentals, DateTime.UtcNow);
+            {
+                return new ScraperResults(url, fundamentals);
+            }
 
             foreach (var tr in trs)
             {
@@ -58,7 +66,7 @@ namespace FundamentalsAggregator.Scrapers
                 fundamentals.Add(name, value);
             }
 
-            return new ScraperResults(symbol, url, fundamentals, DateTime.UtcNow);
+            return new ScraperResults(url, fundamentals);
         }
     }
 }

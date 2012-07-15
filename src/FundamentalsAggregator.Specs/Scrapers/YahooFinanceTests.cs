@@ -25,7 +25,6 @@ namespace FundamentalsAggregator.Specs.Scrapers
             {
                 results = new YahooFinance().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
-                results.TickerSymbol.Should().Be(tickerSymbol);
                 AssertHelper.AssertFundamental<float>(results, "Price/Book", Is.Not.EqualTo(0));
             }
         }

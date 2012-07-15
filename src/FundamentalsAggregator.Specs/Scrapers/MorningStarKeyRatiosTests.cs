@@ -22,9 +22,8 @@ namespace FundamentalsAggregator.Specs.Scrapers
             [Test, TestCaseSource("Symbols")]
             public void It_should_scrape_fundamentals(TickerSymbol tickerSymbol)
             {
-                results = new MorningStarKeyRatios().GetFundamentals(tickerSymbol);
+                results = new MorningstarKeyRatios().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
-                results.TickerSymbol.Should().Be(tickerSymbol);
                 AssertHelper.AssertFundamental<float>(results, "Operating Margin %", Is.Not.EqualTo(0));
             }
         }

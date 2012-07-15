@@ -1,0 +1,41 @@
+﻿@model FundamentalsAggregator.AggregationResults
+@{
+    ViewBag.Title = @Model.Symbol;
+}
+<div class="offset1 span8">
+
+    <form class="form-inline row">
+        <input type="text" id="search-symbol" placeholder="Ticker symbol (e.g. JPM)" />
+
+        <select id="search-exchange" class="input-xlarge">
+            <option value="nyse">New York Stock Exchange (NYSE)</option>
+            <option value="nasdaq">NASDAQ</option>
+            <option value="lse">London Stock Exchange (LSE)</option>
+            <option value="asx">Australian Securities Exchange (ASX)</option>
+            <option value="nzx">NZX</option>
+        </select>
+
+        <button type="submit" id="search-btn" class="btn btn-primary">Get Fundamentals</button>
+    </form>
+
+    <div class="row fundamentals-header">
+        <h1>@Model.Symbol</h1>
+    </div>
+
+    @foreach (var p in @Model.Providers)
+    {
+        <div class="row">
+            <h3><a href="@p.Url">@p.ProviderName</a></h3>
+        
+            <table class="table fundamentals-data">
+                @foreach (var f in @p.Fundamentals)
+                {
+                    <tr>
+                        <th>@f.Key</th>
+                        <td>@f.Value</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+</div>

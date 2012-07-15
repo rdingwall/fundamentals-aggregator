@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Fundamentals Aggregator";
+}
+
+<div class="offset1 span10">
+    <div class="hero-unit">
+        <h1>Stock Fundamentals</h1>
+        <p>Enter a ticker symbol to look up its fundamentals.</p>
+
+        <form class="form-inline">
+            <input type="text" id="search-symbol" placeholder="Ticker symbol (e.g. JPM)" />
+
+            <select id="search-exchange" class="input-xlarge">
+                <option value="nyse">New York Stock Exchange (NYSE)</option>
+                <option value="nasdaq">NASDAQ</option>
+                <option value="lse">London Stock Exchange (LSE)</option>
+                <option value="asx">Australian Securities Exchange (ASX)</option>
+                <option value="nzx">NZX</option>
+            </select>
+
+            <button type="submit" id="search-btn" class="btn btn-primary">Get Fundamentals</button>
+        </form>
+    </div>
+</div>

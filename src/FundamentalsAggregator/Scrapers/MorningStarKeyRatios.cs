@@ -7,14 +7,19 @@ using Newtonsoft.Json;
 
 namespace FundamentalsAggregator.Scrapers
 {
-    public class MorningStarKeyRatios : IScraper
+    public class MorningstarKeyRatios : IScraper
     {
-        static readonly ILog Log = LogManager.GetLogger(typeof (MorningStarKeyRatios));
+        static readonly ILog Log = LogManager.GetLogger(typeof (MorningstarKeyRatios));
         static readonly ITickerSymbolFormatter Formatter = new MorningStarFormatter();
 
         // Horrific. This returns an HTML string as JSON.
         const string AjaxUrlFormat = "http://financials.morningstar.com/ajax/keystatsAjax.html?t={0}";
         const string ViewUrlFormat = "http://financials.morningstar.com/ratios/r.html?t={0}";
+
+        public string ProviderName
+        {
+            get { return "Morningstar"; }
+        }
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
@@ -29,7 +34,7 @@ namespace FundamentalsAggregator.Scrapers
             {
                 var fundamentals = ScrapeFundamentals(url);
                 var friendlyUrl = new Uri(String.Format(ViewUrlFormat, symbol.Symbol));
-                return new ScraperResults(symbol, friendlyUrl, fundamentals, DateTime.UtcNow);
+                return new ScraperResults(friendlyUrl, fundamentals);
             }
             catch (Exception e)
             {
@@ -48,8 +53,6 @@ namespace FundamentalsAggregator.Scrapers
                 var o = JsonConvert.DeserializeAnonymousType<dynamic>(json, new {});
 
                 var html = (string) o.ksContent.Value;
-
-                //Log.Debug(html);
 
                 var parser = new MorningStarFundamentalsTableParser(html);
 

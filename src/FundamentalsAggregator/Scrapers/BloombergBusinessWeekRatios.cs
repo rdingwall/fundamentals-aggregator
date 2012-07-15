@@ -16,6 +16,11 @@ namespace FundamentalsAggregator.Scrapers
 
         const string UrlFormat = "http://investing.businessweek.com/research/stocks/financials/ratios.asp?ticker={0}";
 
+        public string ProviderName
+        {
+            get { return "Bloomberg Businessweek"; }
+        }
+
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
             if (symbol == null) throw new ArgumentNullException("symbol");
@@ -59,7 +64,7 @@ namespace FundamentalsAggregator.Scrapers
                 fundamentals.Add(name, value);
             }
 
-            return new ScraperResults(symbol, url, fundamentals, DateTime.UtcNow);
+            return new ScraperResults(url, fundamentals);
         }
     }
 }

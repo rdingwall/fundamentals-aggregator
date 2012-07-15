@@ -17,6 +17,11 @@ namespace FundamentalsAggregator.Scrapers
 
         const string UrlFormat = "http://markets.ft.com/Research/Markets/Tearsheets/Summary?s={0}";
 
+        public string ProviderName
+        {
+            get { return "FT.com (summary)"; }
+        }
+
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
             if (symbol == null) throw new ArgumentNullException("symbol");
@@ -54,7 +59,7 @@ namespace FundamentalsAggregator.Scrapers
                 fundamentals.Add(name, value);
             }
 
-            return new ScraperResults(symbol, url, fundamentals, DateTime.UtcNow);
+            return new ScraperResults(url, fundamentals);
         }
     }
 }

@@ -25,7 +25,6 @@ namespace FundamentalsAggregator.Specs.Scrapers
             {
                 results = new FtDotComSummary().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
-                results.TickerSymbol.Should().Be(tickerSymbol);
                 AssertHelper.AssertFundamental<float>(results, "Open", Is.Not.EqualTo(0));
             }
         }

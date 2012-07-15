@@ -43,6 +43,11 @@ namespace FundamentalsAggregator.Scrapers
                     {"y", "Dividend Yield"},
                 };
 
+        public string ProviderName
+        {
+            get { return "Yahoo Finance"; }
+        }
+
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
             if (symbol == null) throw new ArgumentNullException("symbol");
@@ -78,7 +83,7 @@ namespace FundamentalsAggregator.Scrapers
             }
 
             var friendlyUrl = new Uri(String.Format(UrlFormat, formattedSymbol));
-            return new ScraperResults(symbol, friendlyUrl, fundamentals, DateTime.UtcNow);
+            return new ScraperResults(friendlyUrl, fundamentals);
         }
 
         public static bool IsNull(string value)

@@ -24,7 +24,6 @@ namespace FundamentalsAggregator.Specs.Scrapers
             {
                 results = new BloombergBusinessweekRatios().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
-                results.TickerSymbol.Should().Be(tickerSymbol);
                 AssertHelper.AssertFundamental<string>(results, "Current Ratio", Is.StringEnding("x"));
             }
         }
