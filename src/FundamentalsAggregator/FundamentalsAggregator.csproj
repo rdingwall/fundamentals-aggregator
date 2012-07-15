@@ -62,6 +62,7 @@
     <Compile Include="Scrapers\FtDotComFinancials.cs" />
     <Compile Include="Scrapers\IScraper.cs" />
     <Compile Include="Scrapers\MorningStarFundamentalsTableParser.cs" />
+    <Compile Include="Scrapers\NoFundamentalsAvailableException.cs" />
     <Compile Include="Scrapers\YahooFinance.cs" />
     <Compile Include="Scrapers\YahooFinanceCsvDto.cs" />
     <Compile Include="TickerSymbolFormatters\BloombergBusinessWeekFormatter.cs" />

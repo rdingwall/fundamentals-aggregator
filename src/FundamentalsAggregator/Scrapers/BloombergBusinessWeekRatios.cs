@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using FundamentalsAggregator.TickerSymbolFormatters;
 using HtmlAgilityPack;
@@ -29,6 +30,24 @@ namespace FundamentalsAggregator.Scrapers
 
             var url = new Uri(String.Format(UrlFormat, formattedSymbol));
 
+            IDictionary<string, string> fundamentals;
+            try
+            {
+                fundamentals = GetFundamentals(symbol, url);
+            }
+            catch (Exception e)
+            {
+                throw new ScraperException(symbol, this, e);
+            }
+
+            if (!fundamentals.Any())
+                throw new NoFundamentalsAvailableException();
+
+            return new ScraperResults(url, fundamentals);
+        }
+
+        static IDictionary<string, string> GetFundamentals(TickerSymbol symbol, Uri url)
+        {
             Log.DebugFormat("Looking up {0} from {1}", symbol, url);
 
             string html;
@@ -36,15 +55,18 @@ namespace FundamentalsAggregator.Scrapers
                 html = webClient.DownloadString(url);
 
             var doc = new HtmlDocument
-            {
-                OptionFixNestedTags = true
-            };
+                          {
+                              OptionFixNestedTags = true
+                          };
 
             doc.LoadHtml(html);
 
             var fundamentals = new Dictionary<string, string>();
 
             var tds = doc.DocumentNode.SelectNodes("//table[@class='ratioTable']//td");
+
+            if (tds == null)
+                return fundamentals;
 
             foreach (var td in tds)
             {
@@ -63,8 +85,7 @@ namespace FundamentalsAggregator.Scrapers
                 Log.DebugFormat("Found: {0} = {1}", name, value);
                 fundamentals.Add(name, value);
             }
-
-            return new ScraperResults(url, fundamentals);
+            return fundamentals;
         }
     }
 }

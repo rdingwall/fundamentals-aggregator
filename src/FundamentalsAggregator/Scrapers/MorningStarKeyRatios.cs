@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using FundamentalsAggregator.TickerSymbolFormatters;
 using log4net;
@@ -30,16 +31,21 @@ namespace FundamentalsAggregator.Scrapers
 
             Log.DebugFormat("Using URL = {0}", url);
 
+            IDictionary<string, string> fundamentals;
             try
             {
-                var fundamentals = ScrapeFundamentals(url);
-                var friendlyUrl = new Uri(String.Format(ViewUrlFormat, symbol.Symbol));
-                return new ScraperResults(friendlyUrl, fundamentals);
+                fundamentals = ScrapeFundamentals(url);
             }
             catch (Exception e)
             {
-                throw new ScraperException(String.Format("Error scraping MorningStar Key Ratios from {0}.", url), e);
+                throw new ScraperException(symbol, this, e);
             }
+
+            if (!fundamentals.Any())
+                throw new NoFundamentalsAvailableException();
+
+            var friendlyUrl = new Uri(String.Format(ViewUrlFormat, symbol.Symbol));
+            return new ScraperResults(friendlyUrl, fundamentals);
         }
 
         static IDictionary<string, string> ScrapeFundamentals(Uri url)
@@ -50,13 +56,16 @@ namespace FundamentalsAggregator.Scrapers
 
                 Log.DebugFormat("Got response body ({0} chars)", json.Length);
 
+                var fundamentals = new Dictionary<string, string>();
+
+                if (String.IsNullOrWhiteSpace(json))
+                    return fundamentals;
+
                 var o = JsonConvert.DeserializeAnonymousType<dynamic>(json, new {});
 
                 var html = (string) o.ksContent.Value;
 
                 var parser = new MorningStarFundamentalsTableParser(html);
-
-                var results = new Dictionary<string, string>();
 
                 foreach (var fundamental in parser.FundamentalNames)
                 {
@@ -66,11 +75,14 @@ namespace FundamentalsAggregator.Scrapers
                         Log.DebugFormat("Missing: {0} = {1}", fundamental, value);
                         continue;
                     }
-                    results.Add(fundamental, value);
+                    fundamentals.Add(fundamental, value);
                     Log.DebugFormat("Found: {0} = {1}", fundamental, value);
                 }
 
-                return results;
+                if (!fundamentals.Any())
+                    throw new Exception("All fundamentals were missing?");
+
+                return fundamentals;
             }
         }
     }

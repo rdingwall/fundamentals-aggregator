@@ -28,5 +28,18 @@ namespace FundamentalsAggregator.Specs.Scrapers
                 AssertHelper.AssertFundamental<float>(results, "Open", Is.Not.EqualTo(0));
             }
         }
+
+        [TestFixture]
+        public class When_fetching_a_non_existent_symbol
+        {
+            [Test]
+            public void It_should_throw_a_no_fundamentals_available_exception()
+            {
+                var symbol = new TickerSymbol("asdfb", Exchange.Nyse);
+                var scraper = new FtDotComSummary();
+
+                Assert.Throws<NoFundamentalsAvailableException>(() => scraper.GetFundamentals(symbol));
+            }
+        }
     }
 }

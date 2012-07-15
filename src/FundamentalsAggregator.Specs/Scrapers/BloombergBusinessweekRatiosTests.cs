@@ -27,5 +27,18 @@ namespace FundamentalsAggregator.Specs.Scrapers
                 AssertHelper.AssertFundamental<string>(results, "Current Ratio", Is.StringEnding("x"));
             }
         }
+
+        [TestFixture]
+        public class When_fetching_a_non_existent_symbol
+        {
+            [Test]
+            public void It_should_throw_a_no_fundamentals_available_exception()
+            {
+                var symbol = new TickerSymbol("asdfb", Exchange.Nyse);
+                var scraper = new BloombergBusinessweekRatios();
+
+                Assert.Throws<NoFundamentalsAvailableException>(() => scraper.GetFundamentals(symbol));
+            }
+        }
     }
 }

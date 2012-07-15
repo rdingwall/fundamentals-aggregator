@@ -53,9 +53,30 @@ namespace FundamentalsAggregator.Scrapers
             if (symbol == null) throw new ArgumentNullException("symbol");
 
             var formattedSymbol = Formatter.Format(symbol);
+
+            IDictionary<string, string> fundamentals;
+            try
+            {
+                fundamentals = GetFundamentals(formattedSymbol);
+            }
+            catch (Exception e)
+            {
+                throw new ScraperException(symbol, this, e);
+            }
+
+            var friendlyUrl = new Uri(String.Format(UrlFormat, formattedSymbol));
+
+            if (!fundamentals.Any())
+                throw new NoFundamentalsAvailableException();
+
+            return new ScraperResults(friendlyUrl, fundamentals);
+        }
+
+        static Dictionary<string, string> GetFundamentals(string formattedSymbol)
+        {
             var csvUrl = new Uri(String.Format(CsvUrlFormat, formattedSymbol, String.Join("", ApiParameters.Keys)));
 
-            Log.DebugFormat("Looking up {0} from {1}", symbol, csvUrl);
+            Log.DebugFormat("Looking up {0} from {1}", formattedSymbol, csvUrl);
 
             string csvLine;
             using (var webClient = new WebClient())
@@ -70,7 +91,7 @@ namespace FundamentalsAggregator.Scrapers
             for (var i = 0; i < values.Count; i++)
             {
                 var name = ApiParameters.ElementAt(i).Value;
-                var value = values[i];
+                var value = values[i].Trim();
 
                 if (IsNull(value))
                 {
@@ -81,14 +102,15 @@ namespace FundamentalsAggregator.Scrapers
                 Log.DebugFormat("Found: {0} = {1}", name, value);
                 fundamentals.Add(name, value);
             }
-
-            var friendlyUrl = new Uri(String.Format(UrlFormat, formattedSymbol));
-            return new ScraperResults(friendlyUrl, fundamentals);
+            return fundamentals;
         }
 
         public static bool IsNull(string value)
         {
-            return value == "N/A" || value == "-" || value == "- - -";
+            return String.IsNullOrWhiteSpace(value) ||
+                   value == "N/A" ||
+                   value == "-" ||
+                   value == "- - -";
         }
     }
 

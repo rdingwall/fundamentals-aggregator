@@ -21,5 +21,10 @@ namespace FundamentalsAggregator.Scrapers
         protected ScraperException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
+
+        public ScraperException(TickerSymbol symbol, IScraper scraper, Exception innerException)
+            : this(String.Format("Error looking up symbol {0} from {1}.", symbol, scraper.ProviderName), innerException)
+        {
+        }
     }
 }

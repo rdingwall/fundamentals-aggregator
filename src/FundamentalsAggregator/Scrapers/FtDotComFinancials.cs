@@ -31,14 +31,32 @@ namespace FundamentalsAggregator.Scrapers
 
             var url = new Uri(String.Format(UrlFormat, formattedSymbol));
 
+            IDictionary<string, string> fundamentals;
+            try
+            {
+                fundamentals = GetFundamentals(url);
+            }
+            catch (Exception e)
+            {
+                throw new ScraperException(symbol, this, e);
+            }
+
+            if (!fundamentals.Any())
+                throw new NoFundamentalsAvailableException();
+
+            return new ScraperResults(url, fundamentals);
+        }
+
+        static IDictionary<string, string> GetFundamentals(Uri url)
+        {
             string html;
             using (var webClient = new WebClient())
                 html = webClient.DownloadString(url);
 
             var doc = new HtmlDocument
-            {
-                OptionFixNestedTags = true
-            };
+                          {
+                              OptionFixNestedTags = true
+                          };
 
             doc.LoadHtml(html);
 
@@ -46,9 +64,7 @@ namespace FundamentalsAggregator.Scrapers
             var trs = doc.DocumentNode.SelectNodes("//div[@class='chartTable']/table/tr");
 
             if (trs == null)
-            {
-                return new ScraperResults(url, fundamentals);
-            }
+                return fundamentals;
 
             foreach (var tr in trs)
             {
@@ -65,8 +81,7 @@ namespace FundamentalsAggregator.Scrapers
                 Log.DebugFormat("Found: {0} = {1}", name, value);
                 fundamentals.Add(name, value);
             }
-
-            return new ScraperResults(url, fundamentals);
+            return fundamentals;
         }
     }
 }

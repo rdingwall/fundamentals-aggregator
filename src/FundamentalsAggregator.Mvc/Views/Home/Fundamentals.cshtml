@@ -25,9 +25,16 @@
     @foreach (var p in @Model.Providers)
     {
         <div class="row">
-            <h3><a href="@p.Url">@p.ProviderName</a></h3>
-        
-            <table class="table fundamentals-data">
+            
+            @if (@p.IsError)
+            {
+                <h3>@p.ProviderName</h3>
+                <p>No fundamentals available.</p>
+            }
+            else
+            {
+                <h3><a href="@p.Url">@p.ProviderName</a></h3>
+                <table class="table fundamentals-data">
                 @foreach (var f in @p.Fundamentals)
                 {
                     <tr>
@@ -35,7 +42,9 @@
                         <td>@f.Value</td>
                     </tr>
                 }
-            </table>
+                </table>
+            }
+            
         </div>
     }
 </div>
