@@ -10,7 +10,7 @@ namespace FundamentalsAggregator.Scrapers
     public class MorningStarKeyRatios : IScraper
     {
         static readonly ILog Log = LogManager.GetLogger(typeof (MorningStarKeyRatios));
-        static readonly ITickerSymbolFormatter Formatter = new MorningStarTickerSymbolFormatter();
+        static readonly ITickerSymbolFormatter Formatter = new MorningStarFormatter();
 
         // Horrific. This returns an HTML string as JSON.
         const string AjaxUrlFormat = "http://financials.morningstar.com/ajax/keystatsAjax.html?t={0}";

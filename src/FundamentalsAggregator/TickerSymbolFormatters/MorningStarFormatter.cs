@@ -2,7 +2,7 @@
 
 namespace FundamentalsAggregator.TickerSymbolFormatters
 {
-    public class MorningStarTickerSymbolFormatter : ITickerSymbolFormatter
+    public class MorningStarFormatter : ITickerSymbolFormatter
     {
         public bool IsSupportedExchange(TickerSymbol symbol)
         {

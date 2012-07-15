@@ -55,9 +55,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrapers\IScraper.cs" />
     <Compile Include="Scrapers\MorningStarFundamentalsTableParser.cs" />
+    <Compile Include="Scrapers\YahooFinance.cs" />
+    <Compile Include="Scrapers\YahooFinanceCsvDto.cs" />
+    <Compile Include="TickerSymbolFormatters\YahooFinanceFormatter.cs" />
     <Compile Include="TickerSymbolFormatters\ITickerSymbolFormatter.cs" />
     <Compile Include="Scrapers\MorningStarKeyRatios.cs" />
-    <Compile Include="TickerSymbolFormatters\MorningStarTickerSymbolFormatter.cs" />
+    <Compile Include="TickerSymbolFormatters\MorningStarFormatter.cs" />
     <Compile Include="Scrapers\ScraperException.cs" />
     <Compile Include="Scrapers\ScraperResults.cs" />
     <Compile Include="TickerSymbol.cs" />
