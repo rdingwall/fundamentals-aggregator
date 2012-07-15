@@ -29,7 +29,12 @@
             @if (@p.IsError)
             {
                 <h3>@p.ProviderName</h3>
-                <p>No fundamentals available.</p>
+                <p><span class="label label-important">Error</span> An error occurred looking up this symbol.</p>
+            }
+            else if (@p.NoFundamentalsAvailable)
+            {
+                <h3>@p.ProviderName</h3>
+                <p><span class="label">Unavailable</span> No fundamentals available for this symbol.</p>
             }
             else
             {

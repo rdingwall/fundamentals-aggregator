@@ -22,6 +22,14 @@ namespace FundamentalsAggregator
             Error = error;
         }
 
+        public ProviderResults(string providerName)
+        {
+            if (providerName == null) throw new ArgumentNullException("providerName");
+            ProviderName = providerName;
+            NoFundamentalsAvailable = true;
+        }
+
+        public bool NoFundamentalsAvailable { get; private set; }
         public string ProviderName { get; private set; }
         public Uri Url { get; private set; }
         public IDictionary<string, string> Fundamentals { get; private set; }

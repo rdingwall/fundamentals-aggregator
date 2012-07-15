@@ -29,6 +29,13 @@ namespace FundamentalsAggregator
 
                 return new ProviderResults(scraper.ProviderName, results.Url, results.Fundamentals);
             }
+            catch (NoFundamentalsAvailableException e)
+            {
+                Log.ErrorFormat("Could not find any fundamentals from {0}.", scraper.GetType());
+                Log.Error(e);
+
+                return new ProviderResults(scraper.ProviderName);
+            }
             catch (Exception e)
             {
                 Log.ErrorFormat("Scraper {0} failed!", scraper.GetType());
