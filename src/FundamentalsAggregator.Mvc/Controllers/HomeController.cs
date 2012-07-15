@@ -8,7 +8,7 @@ namespace FundamentalsAggregator.Mvc.Controllers
     {
         readonly Aggregator aggregator = new Aggregator();
 
-        [OutputCache]
+        [OutputCache(Duration = 60 * 60, VaryByParam = "none")]
         public ActionResult Index()
         {
             return View();
