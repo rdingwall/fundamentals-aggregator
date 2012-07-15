@@ -6,7 +6,7 @@ using SharpTestsEx;
 
 namespace FundamentalsAggregator.Specs.Scrapers
 {
-    public class MorningStarKeyRatiosSpecs
+    public class MorningStarKeyRatiosTests
     {
         [TestFixture]
         public class When_fetching_the_key_ratios
@@ -27,7 +27,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
                 results = new MorningStarKeyRatios().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
                 results.TickerSymbol.Should().Be(tickerSymbol);
-                AssertFundamental<float>(results, "Operating Margin %", Is.GreaterThan(0));
+                AssertFundamental<float>(results, "Operating Margin %", Is.Not.EqualTo(0));
             }
 
             public static void AssertFundamental<T>(ScraperResults results, string key, Constraint constraint)

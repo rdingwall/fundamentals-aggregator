@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using FundamentalsAggregator.TickerSymbolFormatters;
-using HtmlAgilityPack;
+using log4net;
 using Newtonsoft.Json;
 
 namespace FundamentalsAggregator.Scrapers
 {
     public class MorningStarKeyRatios : IScraper
     {
+        static readonly ILog Log = LogManager.GetLogger(typeof (MorningStarKeyRatios));
         static readonly ITickerSymbolFormatter Formatter = new MorningStarTickerSymbolFormatter();
 
         // Horrific. This returns an HTML string as JSON.
@@ -18,8 +18,12 @@ namespace FundamentalsAggregator.Scrapers
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
+            Log.DebugFormat("Looking up symbol {0}", symbol);
+
             var symbolFormat = Formatter.Format(symbol);
             var url = new Uri(String.Format(AjaxUrlFormat, symbolFormat));
+
+            Log.DebugFormat("Using URL = {0}", url);
 
             try
             {
@@ -39,35 +43,28 @@ namespace FundamentalsAggregator.Scrapers
             {
                 var json = client.DownloadString(url);
 
+                Log.DebugFormat("Got response body ({0} chars)", json.Length);
+
                 var o = JsonConvert.DeserializeAnonymousType<dynamic>(json, new {});
 
-                var doc = new HtmlDocument
-                              {
-                                  OptionUseIdAttribute = true,
-                                  OptionFixNestedTags = true
-                              };
+                var html = (string) o.ksContent.Value;
 
-                doc.LoadHtml((string)o.ksContent.Value);
+                //Log.Debug(html);
+
+                var parser = new MorningStarFundamentalsTableParser(html);
 
                 var results = new Dictionary<string, string>();
 
-                var financials = doc.GetElementbyId("financials").Element("table").Element("tbody");
-
-                foreach (var tr in financials.Elements("tr"))
+                foreach (var fundamental in parser.FundamentalNames)
                 {
-                    var th = tr.Element("th");
-                    if (th == null)
+                    var value = parser.GetLatestValue(fundamental);
+                    if (value == null)
+                    {
+                        Log.DebugFormat("Missing: {0} = {1}", fundamental, value);
                         continue;
-
-                    var name = HtmlEntity.DeEntitize(th.InnerText);
-
-                    // Use the latest TTM (furthest left) value.
-                    var value = HtmlEntity.DeEntitize(tr.Elements("td").Last().InnerText);
-
-                    if (value == "—")
-                        continue;
-
-                    results.Add(name, value);
+                    }
+                    results.Add(fundamental, value);
+                    Log.DebugFormat("Found: {0} = {1}", fundamental, value);
                 }
 
                 return results;
