@@ -13,10 +13,16 @@ namespace FundamentalsAggregator.Specs.Scrapers
         {
             static ScraperResults results;
 
-            static readonly string[] Symbols = new[] { "AAPL", "GOOG", "XLON:ENRC" };
+            static readonly TickerSymbol[] Symbols = new[]
+                                                         {
+                                                             new TickerSymbol("AAPL", Exchange.Nasdaq), 
+                                                             new TickerSymbol("GOOG", Exchange.Nasdaq), 
+                                                             new TickerSymbol("ENRC", Exchange.Lse),
+                                                             new TickerSymbol("GXY", Exchange.Asx),
+                                                         };
 
             [Test, TestCaseSource("Symbols")]
-            public void It_should_scrape_fundamentals(string tickerSymbol)
+            public void It_should_scrape_fundamentals(TickerSymbol tickerSymbol)
             {
                 results = new MorningStarKeyRatios().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();

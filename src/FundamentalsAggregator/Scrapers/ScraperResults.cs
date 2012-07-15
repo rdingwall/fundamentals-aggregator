@@ -5,14 +5,21 @@ namespace FundamentalsAggregator.Scrapers
 {
     public class ScraperResults
     {
-        public ScraperResults()
+        public ScraperResults(TickerSymbol tickerSymbol, Uri url, 
+            IDictionary<string, string> fundamentals, DateTime timestamp)
         {
-            Fundamentals = new Dictionary<string, string>();
+            if (tickerSymbol == null) throw new ArgumentNullException("tickerSymbol");
+            if (url == null) throw new ArgumentNullException("url");
+            if (fundamentals == null) throw new ArgumentNullException("fundamentals");
+            TickerSymbol = tickerSymbol;
+            Url = url;
+            Fundamentals = fundamentals;
+            Timestamp = timestamp;
         }
 
-        public string TickerSymbol { get; set; }
-        public Uri Url { get; set; }
-        public IDictionary<string, string> Fundamentals { get; set; }
-        public DateTime Timestamp { get; set; }
+        public TickerSymbol TickerSymbol { get; private set; }
+        public Uri Url { get; private set; }
+        public IDictionary<string, string> Fundamentals { get; private set; }
+        public DateTime Timestamp { get; private set; }
     }
 }

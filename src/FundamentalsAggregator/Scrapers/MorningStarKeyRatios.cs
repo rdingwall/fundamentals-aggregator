@@ -2,30 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using FundamentalsAggregator.TickerSymbolFormatters;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 
 namespace FundamentalsAggregator.Scrapers
 {
-    public class MorningStarKeyRatios
+    public class MorningStarKeyRatios : IScraper
     {
+        static readonly ITickerSymbolFormatter Formatter = new MorningStarTickerSymbolFormatter();
+
         // Horrific. This returns an HTML string as JSON.
         const string AjaxUrlFormat = "http://financials.morningstar.com/ajax/keystatsAjax.html?t={0}";
         const string ViewUrlFormat = "http://financials.morningstar.com/ratios/r.html?t={0}";
 
-        public ScraperResults GetFundamentals(string tickerSymbol)
+        public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
-            var url = new Uri(String.Format(AjaxUrlFormat, tickerSymbol));
+            var symbolFormat = Formatter.Format(symbol);
+            var url = new Uri(String.Format(AjaxUrlFormat, symbolFormat));
 
             try
             {
-                return new ScraperResults
-                           {
-                               TickerSymbol = tickerSymbol,
-                               Url = new Uri(String.Format(ViewUrlFormat, tickerSymbol)),
-                               Timestamp = DateTime.UtcNow,
-                               Fundamentals = ScrapeFundamentals(url)
-                           };
+                var fundamentals = ScrapeFundamentals(url);
+                var friendlyUrl = new Uri(String.Format(ViewUrlFormat, symbol.Symbol));
+                return new ScraperResults(symbol, friendlyUrl, fundamentals, DateTime.UtcNow);
             }
             catch (Exception e)
             {
