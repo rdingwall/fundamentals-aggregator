@@ -1,26 +1,39 @@
 using System;
 using FundamentalsAggregator.Scrapers;
-using Machine.Specifications;
+using NUnit.Framework;
+using NUnit.Framework.Constraints;
+using SharpTestsEx;
 
 namespace FundamentalsAggregator.Specs.Scrapers
 {
-    [Subject(typeof(MorningStarKeyRatios))]
     public class MorningStarKeyRatiosSpecs
     {
+        [TestFixture]
         public class When_fetching_the_key_ratios
         {
             static ScraperResults results;
 
-            Because of = () => results = new MorningStarKeyRatios().GetFundamentals("AAPL");
+            static readonly string[] Symbols = new[] { "AAPL", "GOOG", "XLON:ENRC" };
 
-            It should_include_the_ticker_symbol = () => results.TickerSymbol.ShouldEqual("AAPL");
+            [Test, TestCaseSource("Symbols")]
+            public void It_should_scrape_fundamentals(string tickerSymbol)
+            {
+                results = new MorningStarKeyRatios().GetFundamentals(tickerSymbol);
+                results.Url.Should().Not.Be.Null();
+                results.TickerSymbol.Should().Be(tickerSymbol);
+                AssertFundamental<float>(results, "Operating Margin %", Is.GreaterThan(0));
+            }
 
-            It should_include_the_url_to_visit = () => results.Url.ShouldNotBeNull();
+            public static void AssertFundamental<T>(ScraperResults results, string key, Constraint constraint)
+            {
+                if (!results.Fundamentals.ContainsKey(key))
+                    Assert.Fail("Missing fundamental: {0}. Found: {1}", key, 
+                        String.Join(", ", results.Fundamentals.Keys));
 
-            It should_return_some_fundamentals = () => results.Fundamentals.ShouldNotBeEmpty();
+                var value = Convert.ChangeType(results.Fundamentals[key], typeof (T));
 
-            It should_return_the_operating_margin =
-                () => Convert.ToSingle(results.Fundamentals["Operating Margin %"]).ShouldBeGreaterThan(0);
+                Assert.That(value, constraint);
+            }
         }
     }
 }
