@@ -12,6 +12,7 @@ namespace FundamentalsAggregator.TickerSymbolFormatters
                 case Exchange.Nasdaq:
                 case Exchange.Asx:
                 case Exchange.Nyse:
+                case Exchange.Nzx:
                     return true;
             }
 
@@ -35,6 +36,9 @@ namespace FundamentalsAggregator.TickerSymbolFormatters
 
                 case Exchange.Asx:
                     return name + ".AX";
+
+                case Exchange.Nzx:
+                    return name + ".NZ";
 
                 default:
                     throw new UnsupportedExchangeException(

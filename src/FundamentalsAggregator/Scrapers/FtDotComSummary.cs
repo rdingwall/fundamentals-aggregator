@@ -8,14 +8,14 @@ using log4net;
 
 namespace FundamentalsAggregator.Scrapers
 {
-    public class FtDotComFinancials : IScraper
+    public class FtDotComSummary : IScraper
     {
-        static readonly ILog Log = LogManager.GetLogger(typeof (FtDotComFinancials));
+        static readonly ILog Log = LogManager.GetLogger(typeof(FtDotComSummary));
 
         static readonly ITickerSymbolFormatter Formatter =
             new FtDotComFormatter();
 
-        const string UrlFormat = "http://markets.ft.com/Research/Markets/Tearsheets/Financials?s={0}";
+        const string UrlFormat = "http://markets.ft.com/Research/Markets/Tearsheets/Summary?s={0}";
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)
         {
@@ -37,16 +37,12 @@ namespace FundamentalsAggregator.Scrapers
             doc.LoadHtml(html);
 
             var fundamentals = new Dictionary<string, string>();
-            var trs = doc.DocumentNode.SelectNodes("//div[@class='chartTable']/table/tr");
-
-            if (trs == null)
-                return new ScraperResults(symbol, url, fundamentals, DateTime.UtcNow);
+            var trs = doc.DocumentNode.SelectNodes("//div[@data-ajax-name='EquitySummaryTable']//table[contains(@class, 'horizontalTable')]//tr");
 
             foreach (var tr in trs)
             {
-                var tds = tr.Elements("td");
-                var name = tds.First().InnerText;
-                var value = tds.Last().InnerText;
+                var name = tr.Elements("th").Single().InnerText;
+                var value = tr.Elements("td").Single().InnerText;
 
                 if (value == "--")
                 {

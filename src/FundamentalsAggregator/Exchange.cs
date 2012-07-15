@@ -5,6 +5,7 @@
         Nyse,
         Asx,
         Lse,
-        Nasdaq
+        Nasdaq,
+        Nzx
     }
 }

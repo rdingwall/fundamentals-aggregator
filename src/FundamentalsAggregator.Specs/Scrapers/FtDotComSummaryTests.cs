@@ -4,7 +4,7 @@ using SharpTestsEx;
 
 namespace FundamentalsAggregator.Specs.Scrapers
 {
-    public class YahooFinanceTests
+    public class FtDotComSummaryTests
     {
         [TestFixture]
         public class When_fetching_data
@@ -23,10 +23,10 @@ namespace FundamentalsAggregator.Specs.Scrapers
             [Test, TestCaseSource("Symbols")]
             public void It_should_scrape_fundamentals(TickerSymbol tickerSymbol)
             {
-                results = new YahooFinance().GetFundamentals(tickerSymbol);
+                results = new FtDotComSummary().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
                 results.TickerSymbol.Should().Be(tickerSymbol);
-                AssertHelper.AssertFundamental<float>(results, "Price/Book", Is.Not.EqualTo(0));
+                AssertHelper.AssertFundamental<float>(results, "Open", Is.Not.EqualTo(0));
             }
         }
     }

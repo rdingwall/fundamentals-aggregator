@@ -1,7 +1,5 @@
-using System;
 using FundamentalsAggregator.Scrapers;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using SharpTestsEx;
 
 namespace FundamentalsAggregator.Specs.Scrapers
@@ -19,6 +17,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
                                                              new TickerSymbol("GOOG", Exchange.Nasdaq), 
                                                              new TickerSymbol("ENRC", Exchange.Lse),
                                                              new TickerSymbol("GXY", Exchange.Asx),
+                                                             new TickerSymbol("TME", Exchange.Nzx)
                                                          };
 
             [Test, TestCaseSource("Symbols")]
@@ -27,18 +26,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
                 results = new FtDotComFinancials().GetFundamentals(tickerSymbol);
                 results.Url.Should().Not.Be.Null();
                 results.TickerSymbol.Should().Be(tickerSymbol);
-                AssertFundamental<float>(results, "Current ratio", Is.Not.EqualTo(0));
-            }
-
-            public static void AssertFundamental<T>(ScraperResults results, string key, Constraint constraint)
-            {
-                if (!results.Fundamentals.ContainsKey(key))
-                    Assert.Fail("Missing fundamental: {0}. Found: {1}", key, 
-                        String.Join(", ", results.Fundamentals.Keys));
-
-                var value = Convert.ChangeType(results.Fundamentals[key], typeof (T));
-
-                Assert.That(value, constraint);
+                AssertHelper.AssertFundamental<float>(results, "Current ratio", Is.Not.EqualTo(0));
             }
         }
     }
