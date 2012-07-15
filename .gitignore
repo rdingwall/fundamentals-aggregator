@@ -3,6 +3,7 @@ bin
 obj
 _ReSharper.FundamentalsAggregator
 packages/*
+*.suo
 
 # mstest test results
 TestResults
