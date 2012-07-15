@@ -14,7 +14,7 @@ namespace FundamentalsAggregator.Mvc.Controllers
             return View();
         }
 
-        //[OutputCache(Duration = 30 * 60, Location = OutputCacheLocation.ServerAndClient, VaryByParam = "*")]
+        [OutputCache(Duration = 30 * 60, Location = OutputCacheLocation.ServerAndClient, VaryByParam = "*")]
         public ActionResult Fundamentals(string symbol, string exchange)
         {
             var ts = new TickerSymbol(symbol, (Exchange) Enum.Parse(typeof (Exchange), exchange, true));
