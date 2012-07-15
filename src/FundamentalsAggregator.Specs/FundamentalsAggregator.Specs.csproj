@@ -66,6 +66,7 @@
     <Compile Include="BeforeAllTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrapers\AssertHelper.cs" />
+    <Compile Include="Scrapers\BloombergBusinessweekRatiosTests.cs" />
     <Compile Include="Scrapers\FtDotComSummaryTests.cs" />
     <Compile Include="Scrapers\FtDotComFinancialsTests.cs" />
     <Compile Include="Scrapers\YahooFinanceTests.cs" />
