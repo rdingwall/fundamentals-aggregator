@@ -40,16 +40,20 @@
             {
                 <h3><a href="@p.Url">@p.ProviderName</a></h3>
                 <table class="table fundamentals-data">
-                @foreach (var f in @p.Fundamentals)
-                {
-                    <tr>
-                        <th>@f.Key</th>
-                        <td>@f.Value</td>
-                    </tr>
-                }
+                    @foreach (var f in @p.Fundamentals)
+                    {
+                        <tr>
+                            <th>@f.Key</th>
+                            <td>@f.Value</td>
+                        </tr>
+                    }
                 </table>
             }
             
         </div>
     }
+    
+    <div class="row muted">
+        <p style="text-align: center;"><strong>New!</strong> Add <a href="?json=1"><code>?json=1</code></a> or <code>Accept: application/json</code> to return JSON fundamentals only!</p>
+    </div>
 </div>
