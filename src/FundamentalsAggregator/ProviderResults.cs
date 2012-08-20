@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Newtonsoft.Json;
 
 namespace FundamentalsAggregator
 {
@@ -29,11 +31,15 @@ namespace FundamentalsAggregator
             NoFundamentalsAvailable = true;
         }
 
+        [DefaultValue(false)]
         public bool NoFundamentalsAvailable { get; private set; }
+
         public string ProviderName { get; private set; }
         public Uri Url { get; private set; }
         public IDictionary<string, string> Fundamentals { get; private set; }
         public Exception Error { get; private set; }
+
+        [DefaultValue(false)]
         public bool IsError { get { return Error != null; } }
     }
 }
