@@ -6,7 +6,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
 {
     public class MorningStarKeyRatiosTests
     {
-        [TestFixture]
+        [TestFixture, Category("Integration")]
         public class When_fetching_the_key_ratios
         {
             static ScraperResults results;
@@ -28,7 +28,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
             }
         }
 
-        [TestFixture]
+        [TestFixture, Category("Integration")]
         public class When_fetching_a_non_existent_symbol
         {
             [Test]

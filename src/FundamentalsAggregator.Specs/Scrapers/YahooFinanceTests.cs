@@ -6,7 +6,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
 {
     public class YahooFinanceTests
     {
-        [TestFixture]
+        [TestFixture, Category("Integration")]
         public class When_fetching_data
         {
             static ScraperResults results;
@@ -29,7 +29,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
             }
         }
 
-        [TestFixture]
+        [TestFixture, Category("Integration")]
         public class When_fetching_a_non_existent_symbol
         {
             [Test]
