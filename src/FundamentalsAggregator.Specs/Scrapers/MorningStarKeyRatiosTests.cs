@@ -15,8 +15,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
                                                          {
                                                              new TickerSymbol("AAPL", Exchange.Nasdaq), 
                                                              new TickerSymbol("GOOG", Exchange.Nasdaq), 
-                                                             new TickerSymbol("ENRC", Exchange.Lse),
-                                                             new TickerSymbol("GXY", Exchange.Asx)
+                                                             new TickerSymbol("ENRC", Exchange.Lse)
                                                          };
 
             [Test, TestCaseSource("Symbols")]
