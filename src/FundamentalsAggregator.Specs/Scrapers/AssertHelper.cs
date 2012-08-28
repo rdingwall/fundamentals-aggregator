@@ -13,7 +13,20 @@ namespace FundamentalsAggregator.Specs.Scrapers
                 Assert.Fail("Missing fundamental: {0}. Found: {1}", key,
                     String.Join(", ", results.Fundamentals.Keys));
 
-            var value = Convert.ChangeType(results.Fundamentals[key], typeof(T));
+            var orig = results.Fundamentals[key];
+
+            var value = default(T);
+
+            try
+            {
+                value = (T)Convert.ChangeType(orig, typeof(T));
+
+            }
+            catch (FormatException)
+            {
+                Assert.Fail("Could not parse fundamental '{0}' = '{1}' as a {2}.", key, orig, typeof(T));
+            }
+
 
             Assert.That(value, constraint);
         }

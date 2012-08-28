@@ -16,7 +16,8 @@ namespace FundamentalsAggregator
                                new FtDotComSummary(),
                                new BloombergBusinessweekRatios(),
                                new YahooFinance(),
-                               new MorningstarKeyRatios()
+                               new MorningstarKeyRatios(),
+                               new GoogleFinanceSummary() 
                            }.Select(s => new ScraperRunner(s))
                            .ToArray();
         }
