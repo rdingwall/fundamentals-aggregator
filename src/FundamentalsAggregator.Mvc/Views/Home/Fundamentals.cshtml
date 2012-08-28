@@ -20,6 +20,12 @@
 
     <div class="row fundamentals-header">
         <h1>@Model.Symbol</h1>
+
+        @if (@Model.HasLongName)
+        {
+            <h4>@Model.LongName</h4>
+        }
+
     </div>
 
     @foreach (var p in @Model.Providers)

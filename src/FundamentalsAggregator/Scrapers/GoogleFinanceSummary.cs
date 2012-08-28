@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Xml;
 using System.Xml.Linq;
 using FundamentalsAggregator.TickerSymbolFormatters;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using log4net;
+using System.Xml.XPath;
 
 namespace FundamentalsAggregator.Scrapers
 {
@@ -14,7 +18,8 @@ namespace FundamentalsAggregator.Scrapers
         static readonly ILog Log = LogManager.GetLogger(typeof(GoogleFinanceSummary));
         public string ProviderName { get { return "Google Finance"; } }
 
-        const string XmlApiUrlFormat = "http://www.google.com/ig/api?exchange={0}&stock={1}";
+        // http://developer.yahoo.com/yql/console/?q=show%20tables&env=store://datatables.org/alltableswithkeys#h=select%20%2a%20from%20google.igoogle.stock%20where%20stock%3D%27ibm%27%3B
+        const string XmlApiUrlFormat = "http://query.yahooapis.com/v1/public/yql?q=select * from google.igoogle.stock where stock='{0}';&env=store://datatables.org/alltableswithkeys&format=json";
         const string FriendlyUrlFormat = "http://www.google.com/finance?q={0}";
         static readonly ITickerSymbolFormatter Formatter = new GoogleFinanceFormatter();
 
@@ -22,7 +27,9 @@ namespace FundamentalsAggregator.Scrapers
         {
             if (symbol == null) throw new ArgumentNullException("symbol");
 
-            var url = new Uri(String.Format(XmlApiUrlFormat, symbol.Exchange, symbol.Symbol));
+            var formattedSymbol = Formatter.Format(symbol);
+
+            var url = new Uri(String.Format(XmlApiUrlFormat, formattedSymbol));
 
             IDictionary<string, string> fundamentals;
             try
@@ -37,7 +44,7 @@ namespace FundamentalsAggregator.Scrapers
             if (!fundamentals.Any())
                 throw new NoFundamentalsAvailableException();
 
-            var friendlyUrl = new Uri(String.Format(FriendlyUrlFormat, Formatter.Format(symbol)));
+            var friendlyUrl = new Uri(String.Format(FriendlyUrlFormat, formattedSymbol));
 
             return new ScraperResults(friendlyUrl, fundamentals);
         }
@@ -46,13 +53,13 @@ namespace FundamentalsAggregator.Scrapers
         {
             Log.DebugFormat("Looking up {0} from {1}", symbol, url);
 
-            string xml;
+            string json;
             using (var webClient = new WebClient())
-                xml = webClient.DownloadString(url);
+                json = webClient.DownloadString(url);
 
-            Log.DebugFormat("Got data ({0} chars)", xml.Length);
+            Log.DebugFormat("Got data ({0} chars)", json.Length);
 
-            var doc = XDocument.Parse(xml);
+            var doc = JsonConvert.DeserializeObject<dynamic>(json);
 
             var measures = new[]
                                {
@@ -67,14 +74,24 @@ namespace FundamentalsAggregator.Scrapers
                                    "open",
                                    "y_close",
                                    "change",
-                                   "perc_change"
+                                   "perc_change",
+                                   "exchange"
                                };
 
-            return doc.Element("xml_api_reply").Element("finance")
-                .Elements()
-                .Where(e => measures.Contains(e.Name.LocalName))
-                .ToDictionary(e => PrettyName(e.Name.LocalName), e => e.Attribute("data").Value);
+            var finance = (JContainer)doc.query.results.xml_api_reply.finance;
 
+            return finance.Children()
+                .OfType<JProperty>()
+                .Where(p => measures.Contains(p.Name))
+                .ToDictionary(p => PrettyName(p.Name), p => GetValue(p.Value));
+        }
+
+        static string GetValue(JToken value)
+        {
+            if (value is JValue)
+                return value.ToString();
+
+            return value["data"].ToString();
         }
 
         static string PrettyName(string measureName)

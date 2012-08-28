@@ -17,7 +17,7 @@ namespace FundamentalsAggregator
                                new BloombergBusinessweekRatios(),
                                new YahooFinance(),
                                new MorningstarKeyRatios(),
-                               new GoogleFinanceSummary() 
+                               //new GoogleFinanceSummary() 
                            }.Select(s => new ScraperRunner(s))
                            .ToArray();
         }
@@ -32,7 +32,14 @@ namespace FundamentalsAggregator
                 .OrderBy(r => r.ProviderName)
                 .ToList();
 
-            return new AggregationResults(symbol, providerResults, DateTime.UtcNow);
+            var longName = providerResults
+                .Where(r => r.ProviderName == new YahooFinance().ProviderName)
+                .SelectMany(r => r.Fundamentals)
+                .Where(p => p.Key == "Name")
+                .Select(p => p.Value)
+                .FirstOrDefault();
+
+            return new AggregationResults(symbol, providerResults, DateTime.UtcNow, longName);
         }
     }
 }

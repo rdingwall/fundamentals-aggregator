@@ -6,7 +6,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
 {
     public class GoogleFinanceSummaryTests
     {
-        [TestFixture, Category("Integration")]
+        [TestFixture, Category("Integration"), Ignore("Todo")]
         public class When_fetching_the_stock_info
         {
             static ScraperResults results;
@@ -29,7 +29,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
             }
         }
 
-        [TestFixture, Category("Integration")]
+        [TestFixture, Category("Integration"), Ignore("Todo")]
         public class When_fetching_a_non_existent_symbol
         {
             [Test]
