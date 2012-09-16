@@ -7,7 +7,7 @@ namespace FundamentalsAggregator
 {
     public class ProviderResults
     {
-        public ProviderResults(string providerName, Uri url, IDictionary<string, string> fundamentals)
+        public ProviderResults(string providerName, Uri url, IEnumerable<FundamentalResult> fundamentals)
         {
             if (providerName == null) throw new ArgumentNullException("providerName");
             if (url == null) throw new ArgumentNullException("url");
@@ -36,7 +36,7 @@ namespace FundamentalsAggregator
 
         public string ProviderName { get; private set; }
         public Uri Url { get; private set; }
-        public IDictionary<string, string> Fundamentals { get; private set; }
+        public IEnumerable<FundamentalResult> Fundamentals { get; private set; }
         public Exception Error { get; private set; }
 
         [DefaultValue(false)]

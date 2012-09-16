@@ -53,8 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aggregator.cs" />
+    <Compile Include="Wildcard.cs" />
     <Compile Include="Exchange.cs" />
     <Compile Include="AggregationResults.cs" />
+    <Compile Include="FundamentalResult.cs" />
+    <Compile Include="Highligher.cs" />
     <Compile Include="IAggregator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderResults.cs" />

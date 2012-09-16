@@ -49,8 +49,23 @@
                     @foreach (var f in @p.Fundamentals)
                     {
                         <tr>
-                            <th>@f.Key</th>
-                            <td>@f.Value</td>
+                            @if (f.IsHighlighted)
+                            {
+                                <th class="highlighted">@f.Name</th>
+                            }
+                            else
+                            {
+                                <th>@f.Name</th>
+                            }
+                            
+                            @if (f.IsHighlighted)
+                            {
+                                <td class="highlighted">@f.Value</td>
+                            }
+                            else
+                            {
+                                <td>@f.Value</td>
+                            }
                         </tr>
                     }
                 </table>

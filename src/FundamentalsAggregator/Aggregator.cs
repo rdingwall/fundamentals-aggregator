@@ -34,10 +34,11 @@ namespace FundamentalsAggregator
                 .OrderBy(r => r.ProviderName)
                 .ToList();
 
+            // Find the stock's long name e.g. J.P. Morgan Chase & Co.
             var longName = providerResults
                 .Where(r => r.ProviderName == new YahooFinance().ProviderName)
                 .SelectMany(r => r.Fundamentals)
-                .Where(p => p.Key == "Name")
+                .Where(p => p.Name == "Name")
                 .Select(p => p.Value)
                 .FirstOrDefault();
 
