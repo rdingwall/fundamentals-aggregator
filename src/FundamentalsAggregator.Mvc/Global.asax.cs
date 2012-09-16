@@ -55,7 +55,8 @@ namespace FundamentalsAggregator.Mvc
 
         public override void Dispose()
         {
-            container.Dispose();
+            if (container != null)
+                container.Dispose();
             base.Dispose();
         }
     }
