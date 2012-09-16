@@ -1,16 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Castle.MicroKernel.Registration;
+using Castle.Windsor;
 
 namespace FundamentalsAggregator.Mvc
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
+        IWindsorContainer container;
+
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -38,8 +41,22 @@ namespace FundamentalsAggregator.Mvc
         {
             AreaRegistration.RegisterAllAreas();
 
+            container = new WindsorContainer();
+            container.Register(
+                Component.For<Aggregator>(),
+                AllTypes.FromThisAssembly().BasedOn<Controller>().LifestyleTransient());
+            DependencyResolver.SetResolver(new MvcWindsorServiceLocator(container));
+
+            ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory(container.Kernel));
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+
+        public override void Dispose()
+        {
+            container.Dispose();
+            base.Dispose();
         }
     }
 }

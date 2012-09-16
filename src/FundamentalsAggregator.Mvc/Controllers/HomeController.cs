@@ -7,7 +7,13 @@ namespace FundamentalsAggregator.Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        readonly Aggregator aggregator = new Aggregator();
+        readonly Aggregator aggregator;
+
+        public HomeController(Aggregator aggregator)
+        {
+            if (aggregator == null) throw new ArgumentNullException("aggregator");
+            this.aggregator = aggregator;
+        }
 
         [OutputCache(Duration = 60 * 60, VaryByParam = "none")]
         public ActionResult Index()
