@@ -10,19 +10,17 @@ namespace FundamentalsAggregator.Scrapers
     public abstract class MorningstarValuationBase : IScraper
     {
         readonly string ajaxUrlFormat;
-        readonly string viewUrlFormat;
+        const string ViewUrlFormat = "http://financials.morningstar.com/valuation/price-ratio.html?t={0}";
         readonly IMorningStarTableParser parser;
         static readonly MorningStarFormatter Formatter = new MorningStarFormatter();
         readonly ILog log;
 
-        protected MorningstarValuationBase(string ajaxUrlFormat, string viewUrlFormat, IMorningStarTableParser parser)
+        protected MorningstarValuationBase(string ajaxUrlFormat, IMorningStarTableParser parser)
         {
             if (ajaxUrlFormat == null) throw new ArgumentNullException("ajaxUrlFormat");
-            if (viewUrlFormat == null) throw new ArgumentNullException("viewUrlFormat");
             if (parser == null) throw new ArgumentNullException("parser");
             log = LogManager.GetLogger(GetType());
             this.ajaxUrlFormat = ajaxUrlFormat;
-            this.viewUrlFormat = viewUrlFormat;
             this.parser = parser;
         }
 
@@ -55,7 +53,7 @@ namespace FundamentalsAggregator.Scrapers
             if (!fundamentals.Any())
                 throw new NoFundamentalsAvailableException();
 
-            var friendlyUrl = new Uri(String.Format(viewUrlFormat, symbol.Symbol));
+            var friendlyUrl = new Uri(String.Format(ViewUrlFormat, symbolFormat));
             return new ScraperResults(friendlyUrl, fundamentals);
         }
 
