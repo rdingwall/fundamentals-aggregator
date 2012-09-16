@@ -19,7 +19,7 @@ namespace FundamentalsAggregator.Scrapers
 
         public string ProviderName
         {
-            get { return "Morningstar"; }
+            get { return "Morningstar (Key Ratios)"; }
         }
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)

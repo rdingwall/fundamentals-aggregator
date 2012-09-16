@@ -61,6 +61,12 @@
     <Compile Include="ReadThroughResultCache.cs" />
     <Compile Include="ScraperRunner.cs" />
     <Compile Include="Scrapers\BloombergBusinessWeekRatios.cs" />
+    <Compile Include="Scrapers\IMorningStarTableParser.cs" />
+    <Compile Include="Scrapers\MorningstarCurrentValuation.cs" />
+    <Compile Include="Scrapers\MorningstarForwardValuation.cs" />
+    <Compile Include="Scrapers\MorningStarForwardValuationTableParser.cs" />
+    <Compile Include="Scrapers\MorningStarCurrentValuationTableParser.cs" />
+    <Compile Include="Scrapers\MorningstarValuationBase.cs" />
     <Compile Include="Scrapers\FtDotComSummary.cs" />
     <Compile Include="Scrapers\FtDotComFinancials.cs" />
     <Compile Include="Scrapers\GoogleFinanceSummary.cs" />

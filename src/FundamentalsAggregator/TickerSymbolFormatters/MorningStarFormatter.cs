@@ -6,6 +6,8 @@ namespace FundamentalsAggregator.TickerSymbolFormatters
     {
         public bool IsSupportedExchange(TickerSymbol symbol)
         {
+            if (symbol == null) throw new ArgumentNullException("symbol");
+
             switch (symbol.Exchange)
             {
                 case Exchange.Lse:
@@ -39,6 +41,23 @@ namespace FundamentalsAggregator.TickerSymbolFormatters
                 default:
                     throw new UnsupportedExchangeException(
                         String.Format("Don't know how to get data for {0} exchange from MorningStar.", symbol.Exchange));
+            }
+        }
+
+        public string GetRegionOrDefault(TickerSymbol symbol)
+        {
+            if (symbol == null) throw new ArgumentNullException("symbol");
+
+            switch (symbol.Exchange)
+            {
+                case Exchange.Lse:
+                    return "GBR";
+
+                case Exchange.Asx:
+                    return "AUS";
+
+                default:
+                    return null;
             }
         }
     }

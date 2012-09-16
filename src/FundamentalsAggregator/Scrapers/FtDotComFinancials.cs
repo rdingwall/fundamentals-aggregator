@@ -20,7 +20,7 @@ namespace FundamentalsAggregator.Scrapers
 
         public string ProviderName
         {
-            get { return "FT.com (financials)"; }
+            get { return "FT.com (Financials)"; }
         }
 
         public ScraperResults GetFundamentals(TickerSymbol symbol)
