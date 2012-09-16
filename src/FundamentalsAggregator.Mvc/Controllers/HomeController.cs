@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using System.Web.UI;
 using System.Linq;
 using log4net;
+using Newtonsoft.Json.Serialization;
 
 namespace FundamentalsAggregator.Mvc.Controllers
 {
@@ -34,7 +35,14 @@ namespace FundamentalsAggregator.Mvc.Controllers
             var results = aggregator.Aggregate(ts);
 
             if (Request.AcceptTypes.Contains("application/json") || json)
-                return new JsonNetResult {Data = results};
+                return new JsonNetResult
+                           {
+                               Data = results,
+                               SerializerSettings =
+                                   {
+                                       ContractResolver = new CamelCasePropertyNamesContractResolver()
+                                   }
+                           };
 
             return View(results);
         }
