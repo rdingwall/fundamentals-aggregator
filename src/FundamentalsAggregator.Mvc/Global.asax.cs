@@ -43,7 +43,7 @@ namespace FundamentalsAggregator.Mvc
 
             container = new WindsorContainer();
             container.Register(
-                Component.For<Aggregator>(),
+                Component.For<IAggregator>().Instance(new ReadThroughResultCache(new Aggregator())),
                 AllTypes.FromThisAssembly().BasedOn<Controller>().LifestyleTransient());
             DependencyResolver.SetResolver(new MvcWindsorServiceLocator(container));
 

@@ -7,9 +7,9 @@ namespace FundamentalsAggregator.Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        readonly Aggregator aggregator;
+        readonly IAggregator aggregator;
 
-        public HomeController(Aggregator aggregator)
+        public HomeController(IAggregator aggregator)
         {
             if (aggregator == null) throw new ArgumentNullException("aggregator");
             this.aggregator = aggregator;

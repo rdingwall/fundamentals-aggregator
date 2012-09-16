@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,8 +55,10 @@
     <Compile Include="Aggregator.cs" />
     <Compile Include="Exchange.cs" />
     <Compile Include="AggregationResults.cs" />
+    <Compile Include="IAggregator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderResults.cs" />
+    <Compile Include="ReadThroughResultCache.cs" />
     <Compile Include="ScraperRunner.cs" />
     <Compile Include="Scrapers\BloombergBusinessWeekRatios.cs" />
     <Compile Include="Scrapers\FtDotComSummary.cs" />

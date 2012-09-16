@@ -4,7 +4,7 @@ using FundamentalsAggregator.Scrapers;
 
 namespace FundamentalsAggregator
 {
-    public class Aggregator
+    public class Aggregator : IAggregator
     {
         readonly ScraperRunner[] scrapers;
 
