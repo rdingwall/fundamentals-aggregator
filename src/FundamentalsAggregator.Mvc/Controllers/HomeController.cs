@@ -2,12 +2,14 @@
 using System.Web.Mvc;
 using System.Web.UI;
 using System.Linq;
+using log4net;
 
 namespace FundamentalsAggregator.Mvc.Controllers
 {
     public class HomeController : Controller
     {
         readonly IAggregator aggregator;
+        static readonly ILog Log = LogManager.GetLogger(typeof (HomeController));
 
         public HomeController(IAggregator aggregator)
         {
@@ -26,6 +28,8 @@ namespace FundamentalsAggregator.Mvc.Controllers
             [ModelBinder(typeof(TruthyBooleanModelBinder))] bool json = false)
         {
             var ts = new TickerSymbol(symbol, (Exchange) Enum.Parse(typeof (Exchange), exchange, true));
+
+            Log.InfoFormat("Looking up symbol {0}", ts);
 
             var results = aggregator.Aggregate(ts);
 
