@@ -8,67 +8,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:TickerSymbolFormatters/f:YahooFinanceFormatter.cs" caret="1139" fromTop="24" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:TickerSymbolFormatters/f:BloombergBusinessWeekFormatter.cs" caret="913" fromTop="31" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:IScraper.cs" caret="118" fromTop="3" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarFundamentalsTableParser.cs" caret="520" fromTop="12" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="267" fromTop="8" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Index.cshtml" caret="396" fromTop="11" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Aggregator.cs" caret="1171" fromTop="18" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:AggregationResults.cs" caret="491" fromTop="16" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:NoFundamentalsAvailableException.cs" caret="238" fromTop="7" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperException.cs" caret="825" fromTop="26" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:YahooFinanceTests.cs" caret="1410" fromTop="3" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:AssertHelper.cs" caret="0" fromTop="0" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:YahooFinance.cs" caret="3765" fromTop="70" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarKeyRatiosTests.cs" caret="1793" fromTop="15" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:FtDotComSummaryTests.cs" caret="1754" fromTop="20" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComFinancials.cs" caret="2109" fromTop="13" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComSummary.cs" caret="2128" fromTop="16" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:BloombergBusinessWeekRatios.cs" caret="2190" fromTop="15" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:BloombergBusinessweekRatiosTests.cs" caret="1803" fromTop="21" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="926" fromTop="5" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:FtDotComFinancialsTests.cs" caret="841" fromTop="17" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:_Layout.cshtml" caret="148" fromTop="4" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:Error.cshtml" caret="100" fromTop="5" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="1192" fromTop="4" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Controllers/f:HomeController.cs" caret="369" fromTop="12" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1851" fromTop="8" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1256" fromTop="17" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="359" fromTop="9" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Web.config" caret="657" fromTop="13" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Properties/f:AssemblyInfo.cs" caret="1504" fromTop="12" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:GoogleFinanceSummary.cs" caret="0" fromTop="0" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:TickerSymbolFormatters/f:MorningStarFormatter.cs" caret="297" fromTop="9" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarFundamentalsTableParser.cs" caret="845" fromTop="9" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarCurrentValuationTests.cs" caret="1641" fromTop="19" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarForwardValuationTableParser.cs" caret="1461" fromTop="22" />
+      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:MorningStarForwardValuationTests.cs" caret="1231" fromTop="20" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarCurrentValuationTableParser.cs" caret="959" fromTop="16" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="824" fromTop="21" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComSummary.cs" caret="464" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComFinancials.cs" caret="690" fromTop="4" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningstarCurrentValuation.cs" caret="322" fromTop="6" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningstarValuationBase.cs" caret="344" fromTop="12" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningstarForwardValuation.cs" caret="191" fromTop="5" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:IScraper.cs" caret="144" fromTop="5" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Aggregator.cs" caret="1567" fromTop="17" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1447" fromTop="29" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="464" fromTop="13" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="167" fromTop="7" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Wildcard.cs" caret="122" fromTop="2" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Content/f:Site.css" caret="0" fromTop="0" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Content/d:bootstrap/d:css/f:bootstrap.css" caret="9055" fromTop="5" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="2402" fromTop="66" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:_Layout.cshtml" caret="822" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:AggregationResults.cs" caret="148" fromTop="7" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="1523" fromTop="17" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:FundamentalResult.cs" caret="132" fromTop="6" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Controllers/f:HomeController.cs" caret="1171" fromTop="11" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:WindsorControllerFactory.cs" caret="901" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1323" fromTop="4" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="2400" fromTop="29" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1815" fromTop="13" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="2173" fromTop="22" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningStarKeyRatios.cs" caret="1469" fromTop="16" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComSummary.cs" caret="2128" fromTop="16" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:FtDotComSummaryTests.cs" caret="1754" fromTop="20" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:FtDotComFinancials.cs" caret="2109" fromTop="13" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:FtDotComFinancialsTests.cs" caret="1772" fromTop="21" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:BloombergBusinessWeekRatios.cs" caret="2190" fromTop="15" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:BloombergBusinessweekRatiosTests.cs" caret="1803" fromTop="21" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="914" fromTop="22" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="800" fromTop="7" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1393" fromTop="21" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1254" fromTop="17" />
-      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="1131" fromTop="11" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="987" fromTop="16" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="1368" fromTop="23" />
-      <File id="3A1CD480-D4F8-4B7F-BFFB-C935895FB53D/d:Scrapers/f:FtDotComFinancialsTests.cs" caret="841" fromTop="17" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="290" fromTop="17" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="403" fromTop="12" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="290" fromTop="8" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="1211" fromTop="18" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:_Layout.cshtml" caret="148" fromTop="4" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:Global.asax.cs" caret="1445" fromTop="15" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:Error.cshtml" caret="240" fromTop="11" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:Error.cshtml" caret="100" fromTop="5" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Controllers/f:HomeController.cs" caret="489" fromTop="15" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Controllers/f:HomeController.cs" caret="271" fromTop="9" />
-      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="112" fromTop="3" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:MorningstarForwardValuation.cs" caret="366" fromTop="7" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/f:WindsorControllerFactory.cs" caret="692" fromTop="8" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="227" fromTop="4" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="1421" fromTop="23" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="1616" fromTop="27" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ProviderResults.cs" caret="274" fromTop="9" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="171" fromTop="7" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="171" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/d:Scrapers/f:ScraperResults.cs" caret="171" fromTop="16" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Aggregator.cs" caret="1357" fromTop="18" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="1043" fromTop="19" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Aggregator.cs" caret="1092" fromTop="15" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="354" fromTop="6" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="544" fromTop="9" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1014" fromTop="11" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:ScraperRunner.cs" caret="1528" fromTop="18" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Aggregator.cs" caret="1595" fromTop="17" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Wildcard.cs" caret="165" fromTop="2" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Wildcard.cs" caret="1561" fromTop="32" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="1040" fromTop="28" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="218" fromTop="7" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Highligher.cs" caret="888" fromTop="24" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:Wildcard.cs" caret="122" fromTop="2" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="1895" fromTop="14" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="2041" fromTop="18" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="2259" fromTop="23" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Home/f:Fundamentals.cshtml" caret="2402" fromTop="27" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Views/d:Shared/f:_Layout.cshtml" caret="1092" fromTop="21" />
+      <File id="BEAFB5EC-6B6B-4BDA-8C6D-4521F0911A06/f:FundamentalResult.cs" caret="217" fromTop="9" />
+      <File id="97CD06B8-19FC-4055-97BD-AD92A03B2A17/d:Controllers/f:HomeController.cs" caret="1553" fromTop="26" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -83,32 +84,32 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="const" priority="9" />
-      <Item value="string" priority="47" />
-      <Item value="typeof" priority="8" />
+      <Item value="const" priority="10" />
+      <Item value="string" priority="58" />
+      <Item value="typeof" priority="11" />
       <Item value="MorningStarRatioScraperSpecs`0" priority="0" />
-      <Item value="public" priority="31" />
-      <Item value="class" priority="4" />
+      <Item value="public" priority="36" />
+      <Item value="class" priority="5" />
       <Item value="It`0" priority="2" />
       <Item value="Because`0" priority="0" />
       <Item value="__ProtectAttribute`0" priority="0" />
-      <Item value="results" priority="18" />
-      <Item value="static" priority="14" />
+      <Item value="results" priority="21" />
+      <Item value="static" priority="17" />
       <Item value="foo" priority="0" />
       <Item value="float" priority="1" />
-      <Item value="new" priority="73" />
+      <Item value="new" priority="91" />
       <Item value="MorningStarKeyRatios`0" priority="2" />
       <Item value="dynamic" priority="6" />
-      <Item value="doc" priority="10" />
-      <Item value="HtmlDocument`0" priority="0" />
+      <Item value="doc" priority="13" />
+      <Item value="HtmlDocument`0" priority="1" />
       <Item value="client" priority="2" />
-      <Item value="String`0" priority="17" />
+      <Item value="String`0" priority="18" />
       <Item value="UrlFormat" priority="3" />
       <Item value="tickerSymbol" priority="5" />
-      <Item value="var" priority="76" />
-      <Item value="Uri`0" priority="2" />
+      <Item value="var" priority="87" />
+      <Item value="Uri`0" priority="3" />
       <Item value="WebRequest`0" priority="1" />
-      <Item value="url" priority="8" />
+      <Item value="url" priority="10" />
       <Item value="request" priority="1" />
       <Item value="response" priority="1" />
       <Item value="using" priority="10" />
@@ -116,12 +117,12 @@
       <Item value="node" priority="0" />
       <Item value="ExpandoObject" priority="0" />
       <Item value="object" priority="0" />
-      <Item value="foreach" priority="7" />
-      <Item value="in" priority="6" />
+      <Item value="foreach" priority="9" />
+      <Item value="in" priority="7" />
       <Item value="financials" priority="0" />
       <Item value="tr" priority="5" />
       <Item value="name" priority="11" />
-      <Item value="value" priority="19" />
+      <Item value="value" priority="20" />
       <Item value="throw" priority="12" />
       <Item value="AggregateException" priority="0" />
       <Item value="true" priority="4" />
@@ -136,35 +137,35 @@
       <Item value="ThreadStaticAttribute`0" priority="0" />
       <Item value="json" priority="1" />
       <Item value="o" priority="3" />
-      <Item value="if" priority="17" />
+      <Item value="if" priority="23" />
       <Item value="th" priority="0" />
-      <Item value="HtmlEntity`0" priority="4" />
+      <Item value="HtmlEntity`0" priority="5" />
       <Item value="DynamicObject`0" priority="1" />
       <Item value="Dictionary&lt;string,TValue&gt;" priority="0" />
       <Item value="ExpandoObject`0" priority="1" />
-      <Item value="Dictionary" priority="1" />
+      <Item value="Dictionary" priority="2" />
       <Item value="do" priority="0" />
-      <Item value="return" priority="32" />
+      <Item value="return" priority="41" />
       <Item value="d" priority="0" />
-      <Item value="IDictionary" priority="4" />
+      <Item value="IDictionary" priority="5" />
       <Item value="try" priority="3" />
       <Item value="Scrape`0" priority="0" />
       <Item value="Serializable" priority="2" />
       <Item value="ScraperException" priority="3" />
-      <Item value="ctor" priority="2" />
+      <Item value="ctor" priority="7" />
       <Item value="Fundamentals" priority="1" />
-      <Item value="Dictionary&lt;string,string&gt;" priority="3" />
-      <Item value="ScraperResults" priority="2" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="4" />
+      <Item value="ScraperResults" priority="3" />
       <Item value="viewUrl" priority="0" />
       <Item value="TickerSymbol" priority="5" />
       <Item value="ScraperException`0" priority="1" />
       <Item value="Uri" priority="0" />
-      <Item value="DateTime`0" priority="4" />
-      <Item value="void" priority="7" />
+      <Item value="DateTime`0" priority="5" />
+      <Item value="void" priority="8" />
       <Item value="TestFixtureSetUpAttribute`0" priority="2" />
       <Item value="PairwiseAttribute`0" priority="0" />
       <Item value="TestCaseAttribute`0" priority="0" />
-      <Item value="readonly" priority="11" />
+      <Item value="readonly" priority="15" />
       <Item value="Assert`0" priority="4" />
       <Item value="AssertFundamentalIs`0" priority="0" />
       <Item value="Is`0" priority="0" />
@@ -176,23 +177,23 @@
       <Item value="Array`0" priority="0" />
       <Item value="enum" priority="0" />
       <Item value="Exchange`0" priority="18" />
-      <Item value="TickerSymbol`0" priority="12" />
-      <Item value="symbol" priority="26" />
-      <Item value="fundamentals" priority="17" />
+      <Item value="TickerSymbol`0" priority="13" />
+      <Item value="symbol" priority="30" />
+      <Item value="fundamentals" priority="22" />
       <Item value="switch" priority="1" />
       <Item value="case" priority="9" />
       <Item value="default" priority="0" />
       <Item value="TickerSymbolFormatException`0" priority="0" />
-      <Item value="bool" priority="2" />
-      <Item value="false" priority="0" />
+      <Item value="bool" priority="3" />
+      <Item value="false" priority="1" />
       <Item value="ICustomFormatter`0" priority="0" />
       <Item value="ITickerSymbolFormatter" priority="3" />
       <Item value="MorningStarTickerSymbolFormatter`0" priority="0" />
-      <Item value="override" priority="1" />
+      <Item value="override" priority="4" />
       <Item value="Symbol" priority="0" />
       <Item value="LoggerManager`0" priority="0" />
       <Item value="ILog`0" priority="0" />
-      <Item value="Log" priority="18" />
+      <Item value="Log" priority="19" />
       <Item value="log4net" priority="1" />
       <Item value="Config" priority="1" />
       <Item value="Appender" priority="0" />
@@ -211,28 +212,28 @@
       <Item value="ttmIndex" priority="0" />
       <Item value="i" priority="5" />
       <Item value="ttmColumnIndex" priority="1" />
-      <Item value="continue" priority="1" />
+      <Item value="continue" priority="3" />
       <Item value="break" priority="0" />
       <Item value="MorningStarFundamentalsTableParser`0" priority="1" />
       <Item value="Dictionary&lt;string,IDictionary&lt;string,string&gt;&gt;" priority="0" />
       <Item value="period" priority="4" />
-      <Item value="tds" priority="2" />
+      <Item value="tds" priority="5" />
       <Item value="e" priority="2" />
       <Item value="periodNames" priority="0" />
-      <Item value="IEnumerable" priority="2" />
-      <Item value="p" priority="2" />
+      <Item value="IEnumerable" priority="4" />
+      <Item value="p" priority="8" />
       <Item value="List" priority="1" />
       <Item value="Tuple`0" priority="3" />
       <Item value="periodName" priority="1" />
       <Item value="values" priority="0" />
       <Item value="t" priority="0" />
-      <Item value="parser" priority="1" />
-      <Item value="fundamental" priority="9" />
-      <Item value="LogManager`0" priority="4" />
+      <Item value="parser" priority="3" />
+      <Item value="fundamental" priority="12" />
+      <Item value="LogManager`0" priority="7" />
       <Item value="sb" priority="3" />
-      <Item value="null" priority="3" />
+      <Item value="null" priority="5" />
       <Item value="YahooTickerSymbolFormatter`0" priority="0" />
-      <Item value="Formatter" priority="2" />
+      <Item value="Formatter" priority="3" />
       <Item value="formattedSymbol" priority="4" />
       <Item value="ApiParameters" priority="1" />
       <Item value="YahooFinance`0" priority="2" />
@@ -254,16 +255,16 @@
       <Item value="elements" priority="0" />
       <Item value="FtDotComFinancialsTests`0" priority="0" />
       <Item value="table" priority="0" />
-      <Item value="FtDotComSummary`0" priority="2" />
+      <Item value="FtDotComSummary`0" priority="3" />
       <Item value="trs" priority="1" />
       <Item value="BloombergBusinessweekFormatter`0" priority="0" />
       <Item value="BloombergBusinessweekRatios`0" priority="3" />
       <Item value="FtDotComFinancials`0" priority="1" />
       <Item value="IScraper`0" priority="2" />
       <Item value="IScraper" priority="0" />
-      <Item value="TimeSpan`0" priority="2" />
+      <Item value="TimeSpan`0" priority="5" />
       <Item value="sw" priority="4" />
-      <Item value="ScraperResults`0" priority="2" />
+      <Item value="ScraperResults`0" priority="3" />
       <Item value="finally" priority="0" />
       <Item value="Switch`0" priority="0" />
       <Item value="scraper" priority="8" />
@@ -274,13 +275,13 @@
       <Item value="Fundamentals`0" priority="0" />
       <Item value="ProviderInfo`0" priority="0" />
       <Item value="FundamentalsSet`0" priority="0" />
-      <Item value="ProviderResults`0" priority="0" />
+      <Item value="ProviderResults`0" priority="1" />
       <Item value="ProviderResults" priority="1" />
       <Item value="Error" priority="0" />
       <Item value="AggregationResults`0" priority="0" />
       <Item value="AggregationResults" priority="0" />
       <Item value="providerResults" priority="0" />
-      <Item value="Aggregator`0" priority="1" />
+      <Item value="Aggregator`0" priority="2" />
       <Item value="aggregator" priority="1" />
       <Item value="Enum`0" priority="0" />
       <Item value="exchange" priority="0" />
@@ -293,13 +294,69 @@
       <Item value="Nyse" priority="0" />
       <Item value="Exception`0" priority="3" />
       <Item value="NoFundamentalsAvailableException`0" priority="5" />
-      <Item value="this" priority="3" />
+      <Item value="this" priority="6" />
       <Item value="exception" priority="0" />
       <Item value="MorningstarKeyRatios`0" priority="0" />
       <Item value="NoFundamentalsAvailableException" priority="4" />
       <Item value="catch" priority="2" />
-      <Item value="symbolFormat" priority="0" />
+      <Item value="symbolFormat" priority="2" />
       <Item value="protected" priority="0" />
+      <Item value="DependencyResolver`0" priority="0" />
+      <Item value="MvcWindsorServiceLocator" priority="0" />
+      <Item value="ControllerActionInvoker`0" priority="0" />
+      <Item value="container" priority="3" />
+      <Item value="WindsorContainer" priority="0" />
+      <Item value="IComponentsInstaller`0" priority="0" />
+      <Item value="DefaultControllerFactory`0" priority="1" />
+      <Item value="ControllerBuilder`0" priority="0" />
+      <Item value="Component`0" priority="0" />
+      <Item value="AllTypes`0" priority="0" />
+      <Item value="Controller`0" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Runtime" priority="0" />
+      <Item value="ResultCache`0" priority="0" />
+      <Item value="dispose" priority="0" />
+      <Item value="IDisposable`0" priority="0" />
+      <Item value="cache" priority="2" />
+      <Item value="IAggregator`0" priority="1" />
+      <Item value="source" priority="0" />
+      <Item value="CacheItem`0" priority="0" />
+      <Item value="CacheItemPolicy`0" priority="2" />
+      <Item value="CacheItemPolicy" priority="0" />
+      <Item value="AbsoluteExpiration" priority="0" />
+      <Item value="Aggregator" priority="0" />
+      <Item value="HomeController`0" priority="0" />
+      <Item value="MorningStarFormatter`0" priority="0" />
+      <Item value="region" priority="1" />
+      <Item value="strUrl" priority="0" />
+      <Item value="elementId" priority="1" />
+      <Item value="row" priority="2" />
+      <Item value="MorningstarCurrentValuation`0" priority="2" />
+      <Item value="abstract" priority="0" />
+      <Item value="ajaxUrlFormat" priority="0" />
+      <Item value="viewUrlFormat" priority="0" />
+      <Item value="MorningstarFutureValuation`0" priority="1" />
+      <Item value="OptionAutoCloseOnEnd" priority="0" />
+      <Item value="Func" priority="1" />
+      <Item value="HtmlNode`0" priority="1" />
+      <Item value="getTrs" priority="1" />
+      <Item value="MorningStarCurrentValuationTableParser`0" priority="0" />
+      <Item value="IMorningStarTableParser`0" priority="0" />
+      <Item value="MorningstarForwardValuation`0" priority="0" />
+      <Item value="FundamentalResult`0" priority="2" />
+      <Item value="Highligher`0" priority="1" />
+      <Item value="Highligher" priority="1" />
+      <Item value="Name" priority="1" />
+      <Item value="Value" priority="1" />
+      <Item value="IsHighlighted" priority="1" />
+      <Item value="highlighter" priority="0" />
+      <Item value="patterns" priority="0" />
+      <Item value="Wildcard`0" priority="0" />
+      <Item value="Wildcards" priority="0" />
+      <Item value="w" priority="0" />
+      <Item value="IgnoreCase" priority="0" />
+      <Item value="SerializerSettings" priority="0" />
+      <Item value="ContractResolver" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Single">
       <Item value="ShouldBeGreaterThan`0" priority="1" />
@@ -311,21 +368,22 @@
     <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlDocument">
       <Item value="Load`0" priority="0" />
       <Item value="DocumentNode" priority="1" />
-      <Item value="GetElementbyId`0" priority="0" />
+      <Item value="GetElementbyId`0" priority="2" />
       <Item value="ParseErrors" priority="2" />
       <Item value="OptionUseIdAttribute" priority="0" />
       <Item value="OptionFixNestedTags" priority="0" />
       <Item value="LoadHtml`0" priority="1" />
+      <Item value="CreateNavigator`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Net.WebClient">
       <Item value="DownloadString`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="Format`0" priority="11" />
+      <Item value="Format`0" priority="12" />
       <Item value="Join`0" priority="2" />
       <Item value="Equals`0" priority="0" />
       <Item value="IsNullOrEmpty`0" priority="0" />
-      <Item value="IsNullOrWhiteSpace`0" priority="2" />
+      <Item value="IsNullOrWhiteSpace`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Net.WebRequest">
       <Item value="Create`0" priority="1" />
@@ -338,9 +396,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:HtmlAgilityPack.HtmlNode">
       <Item value="SelectSingleNode`0" priority="1" />
-      <Item value="InnerText" priority="8" />
-      <Item value="Elements`0" priority="5" />
-      <Item value="Element`0" priority="4" />
+      <Item value="InnerText" priority="9" />
+      <Item value="Elements`0" priority="11" />
+      <Item value="Element`0" priority="8" />
       <Item value="Name" priority="0" />
       <Item value="SelectNodes`0" priority="0" />
       <Item value="InnerHtml" priority="0" />
@@ -350,18 +408,18 @@
       <Item value="ChangeType`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
-      <Item value="Add`0" priority="2" />
+      <Item value="Add`0" priority="3" />
       <Item value="Keys" priority="1" />
       <Item value="Any`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
-      <Item value="Any`1" priority="0" />
-      <Item value="First`1" priority="1" />
+      <Item value="Any`1" priority="1" />
+      <Item value="First`1" priority="4" />
       <Item value="Where`1" priority="0" />
       <Item value="ToArray`1" priority="1" />
-      <Item value="ToList`1" priority="3" />
+      <Item value="ToList`1" priority="5" />
       <Item value="Skip`1" priority="0" />
-      <Item value="ElementAt`1" priority="0" />
+      <Item value="ElementAt`1" priority="4" />
       <Item value="OrderBy`2" priority="0" />
       <Item value="Count`1" priority="0" />
       <Item value="Select`2" priority="1" />
@@ -380,7 +438,7 @@
       <Item value="ksContent" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@HtmlAgilityPack.HtmlEntity">
-      <Item value="DeEntitize`0" priority="3" />
+      <Item value="DeEntitize`0" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
       <Item value="ShouldBe`0" priority="0" />
@@ -391,7 +449,7 @@
       <Item value="OrderBy`2" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:FundamentalsAggregator.Scrapers.ScraperResults">
-      <Item value="Fundamentals" priority="5" />
+      <Item value="Fundamentals" priority="6" />
       <Item value="TickerSymbol" priority="1" />
       <Item value="ViewUrl" priority="0" />
       <Item value="Url" priority="0" />
@@ -404,7 +462,7 @@
       <Item value="Trim`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
-      <Item value="UtcNow" priority="4" />
+      <Item value="UtcNow" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Uri">
       <Item value="ShouldBe`0" priority="0" />
@@ -441,6 +499,7 @@
     <ItemStatistics item="Qualified:FundamentalsAggregator.TickerSymbol">
       <Item value="Symbol" priority="2" />
       <Item value="Exchange" priority="2" />
+      <Item value="ToString`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@FundamentalsAggregator.Exchange">
       <Item value="Asx" priority="2" />
@@ -456,13 +515,14 @@
       <Item value="ToString`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@log4net.LogManager">
-      <Item value="GetLogger`0" priority="5" />
+      <Item value="GetLogger`0" priority="8" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:log4net.ILog">
       <Item value="DebugFormat`0" priority="13" />
       <Item value="Debug`0" priority="0" />
       <Item value="Error`0" priority="0" />
       <Item value="ErrorFormat`0" priority="1" />
+      <Item value="InfoFormat`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@log4net.Config.BasicConfigurator">
       <Item value="Configure`0" priority="0" />
@@ -474,8 +534,8 @@
       <Item value="Where`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
-      <Item value="Key" priority="1" />
-      <Item value="Value" priority="0" />
+      <Item value="Key" priority="5" />
+      <Item value="Value" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Tuple">
       <Item value="Create`8" priority="0" />
@@ -541,6 +601,69 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:FundamentalsAggregator.Scrapers.YahooFinance">
       <Item value="GetFundamentals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.Mvc.MvcApplication">
+      <Item value="Application" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.DependencyResolver">
+      <Item value="SetResolver`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.Windsor.IWindsorContainer">
+      <Item value="Dispose`0" priority="0" />
+      <Item value="Register`0" priority="0" />
+      <Item value="Kernel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MicroKernel.Registration.Component">
+      <Item value="For`5" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.ControllerBuilder">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerBuilder">
+      <Item value="SetControllerFactory`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MicroKernel.Registration.AllTypes">
+      <Item value="FromThisAssembly`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MicroKernel.Registration.FromAssemblyDescriptor">
+      <Item value="BasedOn`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MicroKernel.Registration.BasedOnDescriptor">
+      <Item value="LifestyleTransient`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Caching.MemoryCache">
+      <Item value="Contains`0" priority="0" />
+      <Item value="Get`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.IAggregator">
+      <Item value="Aggregate`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.TimeSpan">
+      <Item value="FromHours`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="AddHours`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MicroKernel.Registration.ComponentRegistration`1">
+      <Item value="ImplementedBy`0" priority="0" />
+      <Item value="Instance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.TickerSymbolFormatters.MorningStarFormatter">
+      <Item value="GetRegionOrDefault`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.Scrapers.MorningStarValuationTableParser">
+      <Item value="Parse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.ScraperRunner">
+      <Item value="highlighter" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.FundamentalResult">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FundamentalsAggregator.Wildcard">
+      <Item value="IsMatch`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
