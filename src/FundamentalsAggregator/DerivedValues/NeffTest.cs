@@ -98,7 +98,8 @@ namespace FundamentalsAggregator.DerivedValues
         {
             var fundamental = providerResults
                 .SelectMany(p => p.Fundamentals)
-                .FirstOrDefault(r => fundamentalNames.Any(r.NameEquals));
+                .Where(r => fundamentalNames.Any(r.NameEquals))
+                .FirstOrDefault(r => r.Value.Any(Char.IsDigit));
 
             if (fundamental == null)
             {
