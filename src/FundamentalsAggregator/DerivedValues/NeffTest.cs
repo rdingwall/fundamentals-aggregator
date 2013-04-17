@@ -38,13 +38,12 @@ namespace FundamentalsAggregator.DerivedValues
                 if (!TryGet(providerResults, "EPS Estimate Next Year", out forecastEps))
                     return NotEnoughDataResult;
 
-                if (!TryGet(providerResults, new[]
-                                                 {
-                                                     "Annual div yield (TTM)", 
-                                                     "Dividend Yield %", 
-                                                     "Dividend Yield"
-                                                 }, out dividendYield))
-                    return NotEnoughDataResult;
+                TryGet(providerResults, new[]
+                                            {
+                                                "Annual div yield (TTM)",
+                                                "Dividend Yield %",
+                                                "Dividend Yield"
+                                            }, out dividendYield);
 
                 if (!TryGet(providerResults, new[]
                                                  {
