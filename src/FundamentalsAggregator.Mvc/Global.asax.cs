@@ -9,13 +9,13 @@ namespace FundamentalsAggregator.Mvc
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : HttpApplication
     {
         IWindsorContainer container;
 
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new AppHarborErrorAttribute());
             filters.Add(new HandleErrorAttribute());
         }
 
