@@ -56,6 +56,7 @@
       <HintPath>..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,6 +67,7 @@
   <ItemGroup>
     <Compile Include="BeforeAllTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scrapers\AppHarborIgnoreFixture.cs" />
     <Compile Include="Scrapers\AssertHelper.cs" />
     <Compile Include="Scrapers\BloombergBusinessweekRatiosTests.cs" />
     <Compile Include="Scrapers\MorningStarForwardValuationTests.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Scrapers\MorningStarKeyRatiosTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

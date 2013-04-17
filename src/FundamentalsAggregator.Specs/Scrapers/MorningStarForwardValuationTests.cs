@@ -7,7 +7,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
     public class MorningStarForwardValuationTests
     {
         [TestFixture, Category("Integration")]
-        public class When_fetching_the_forward_valuation
+        public class When_fetching_the_forward_valuation : AppHarborIgnoreFixture
         {
             static ScraperResults results;
 
@@ -28,7 +28,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
         }
 
         [TestFixture, Category("Integration")]
-        public class When_fetching_a_non_existent_symbol
+        public class When_fetching_a_non_existent_symbol : AppHarborIgnoreFixture
         {
             [Test]
             public void It_should_throw_a_no_fundamentals_available_exception()

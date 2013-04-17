@@ -7,7 +7,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
     public class FtDotComSummaryTests
     {
         [TestFixture, Category("Integration")]
-        public class When_fetching_data
+        public class When_fetching_data : AppHarborIgnoreFixture
         {
             static ScraperResults results;
 
@@ -30,7 +30,7 @@ namespace FundamentalsAggregator.Specs.Scrapers
         }
 
         [TestFixture, Category("Integration")]
-        public class When_fetching_a_non_existent_symbol
+        public class When_fetching_a_non_existent_symbol : AppHarborIgnoreFixture
         {
             [Test]
             public void It_should_throw_a_no_fundamentals_available_exception()
