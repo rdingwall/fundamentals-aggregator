@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using log4net;
 
 namespace FundamentalsAggregator.DerivedValues
 {
@@ -11,48 +12,70 @@ namespace FundamentalsAggregator.DerivedValues
 
     public class NeffTest : IDerivedValue
     {
+        static readonly ILog Log = LogManager.GetLogger(typeof (NeffTest));
+
+        const string Name = "Neff Test";
+        const string ToolTip = "(Forecast EPS + Dividend Yield) / PE";
+
         static readonly FundamentalResult NotEnoughDataResult =
             new FundamentalResult
                 {
-                    Name = "Neff Test",
-                    Value = "Unknown (not enough data)"
+                    Name = Name,
+                    Value = "Unknown (not enough data)",
+                    ToolTip = ToolTip
                 };
 
         public FundamentalResult Calculate(IEnumerable<ProviderResults> providerResults)
         {
-            double forecastEps;
-            double dividendYield;
-            double currentTtmPe;
+            if (providerResults == null) throw new ArgumentNullException("providerResults");
 
-            if (!TryGet(providerResults, "EPS Estimate Next Year", out forecastEps))
-                return NotEnoughDataResult;
+            try
+            {
+                double forecastEps;
+                double dividendYield;
+                double currentTtmPe;
 
-            if (!TryGet(providerResults, new[]
-                                             {
-                                                 "Annual div yield (TTM)", 
-                                                 "Dividend Yield %", 
-                                                 "Dividend Yield"
-                                             }, out dividendYield))
-                return NotEnoughDataResult;
+                if (!TryGet(providerResults, "EPS Estimate Next Year", out forecastEps))
+                    return NotEnoughDataResult;
 
-            if (!TryGet(providerResults, new[]
-                                             {
-                                                 "P/E (TTM)", 
-                                                 "P/E Ratio",
-                                                 "Price/Earnings"
-                                             }, out currentTtmPe))
-                return NotEnoughDataResult;
+                if (!TryGet(providerResults, new[]
+                                                 {
+                                                     "Annual div yield (TTM)", 
+                                                     "Dividend Yield %", 
+                                                     "Dividend Yield"
+                                                 }, out dividendYield))
+                    return NotEnoughDataResult;
 
-            var neffTestResult = (forecastEps + dividendYield) / currentTtmPe;
+                if (!TryGet(providerResults, new[]
+                                                 {
+                                                     "P/E (TTM)", 
+                                                     "P/E Ratio",
+                                                     "Price/Earnings"
+                                                 }, out currentTtmPe))
+                    return NotEnoughDataResult;
 
-            return new FundamentalResult
-                       {
-                           Name = "Neff Test",
-                           Value = neffTestResult.ToString("0.##"),
-                           IsHighlighted = true,
-                           ToolTip = String.Format("(Forecast EPS + Dividend Yield) / PE. Calculated as {0:0.##} + {1:0.##} / {2:0.##}",
-                                forecastEps, dividendYield, currentTtmPe)
-                       };
+                var neffTestResult = (forecastEps + dividendYield) / currentTtmPe;
+
+                return new FundamentalResult
+                           {
+                               Name = Name,
+                               Value = neffTestResult.ToString("0.##"),
+                               IsHighlighted = true,
+                               ToolTip = String.Format("{0}. Calculated as {1:0.##} + {2:0.##} / {3:0.##}",
+                                    ToolTip, forecastEps, dividendYield, currentTtmPe)
+                           };
+
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+                return new FundamentalResult
+                {
+                    Name = Name,
+                    Value = "Unknown (error in calculation)",
+                    ToolTip = ToolTip
+                };
+            }
         }
 
         static bool TryGet(IEnumerable<ProviderResults> providerResults,

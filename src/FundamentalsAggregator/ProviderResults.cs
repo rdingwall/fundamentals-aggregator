@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Newtonsoft.Json;
+using System.Linq;
 
 namespace FundamentalsAggregator
 {
     public class ProviderResults
     {
-        public ProviderResults(string providerName, Uri url, IEnumerable<FundamentalResult> fundamentals)
+        public ProviderResults()
+        {
+            Fundamentals = Enumerable.Empty<FundamentalResult>();
+        }
+
+        public ProviderResults(string providerName, Uri url, IEnumerable<FundamentalResult> fundamentals) : this()
         {
             if (providerName == null) throw new ArgumentNullException("providerName");
             if (url == null) throw new ArgumentNullException("url");
@@ -17,14 +22,14 @@ namespace FundamentalsAggregator
             Fundamentals = fundamentals;
         }
 
-        public ProviderResults(string providerName, Exception error)
+        public ProviderResults(string providerName, Exception error) : this()
         {
             if (providerName == null) throw new ArgumentNullException("providerName");
             ProviderName = providerName;
             Error = error;
         }
 
-        public ProviderResults(string providerName)
+        public ProviderResults(string providerName) : this()
         {
             if (providerName == null) throw new ArgumentNullException("providerName");
             ProviderName = providerName;
