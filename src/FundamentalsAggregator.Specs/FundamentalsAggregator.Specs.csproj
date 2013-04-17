@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeforeAllTests.cs" />
+    <Compile Include="NumberParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrapers\AppHarborIgnoreFixture.cs" />
     <Compile Include="Scrapers\AssertHelper.cs" />

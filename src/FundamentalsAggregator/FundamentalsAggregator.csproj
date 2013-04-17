@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aggregator.cs" />
+    <Compile Include="DerivedValues\NeffTest.cs" />
+    <Compile Include="NumberParser.cs" />
     <Compile Include="Wildcard.cs" />
     <Compile Include="Exchange.cs" />
     <Compile Include="AggregationResults.cs" />

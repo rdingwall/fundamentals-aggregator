@@ -74,6 +74,39 @@
         </div>
     }
     
+    <div class="row">
+        <h3>Derived Results</h3>
+        <table class="table fundamentals-data">
+            @foreach (var f in @Model.DerivedValues)
+            {
+                <tr>
+                    @if (f.IsHighlighted)
+                    {
+                        <th class="highlighted">@f.Name
+                        @if (f.HasToolTip)
+                        {
+                            <i class="icon-question-sign" title="@f.ToolTip"> </i>
+                        }
+                        </th>
+                    }
+                    else
+                    {
+                        <th>@f.Name</th>
+                    }
+                            
+                    @if (f.IsHighlighted)
+                    {
+                        <td class="highlighted">@f.Value</td>
+                    }
+                    else
+                    {
+                        <td>@f.Value</td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    
     <div class="row muted">
         <p style="text-align: center;"><strong>New!</strong> Add <a href="?json=1"><code>?json=1</code></a> or <code>Accept: application/json</code> to return JSON fundamentals only!</p>
     </div>

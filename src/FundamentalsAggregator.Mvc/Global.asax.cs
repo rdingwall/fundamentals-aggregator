@@ -22,7 +22,7 @@ namespace FundamentalsAggregator.Mvc
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            
             routes.MapRoute(
                 "Fundamentals", // Route name
                 "fundamentals/{exchange}/{symbol}", // URL with parameters

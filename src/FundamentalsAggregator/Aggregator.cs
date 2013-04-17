@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using FundamentalsAggregator.DerivedValues;
 using FundamentalsAggregator.Scrapers;
 
 namespace FundamentalsAggregator
@@ -7,6 +8,7 @@ namespace FundamentalsAggregator
     public class Aggregator : IAggregator
     {
         readonly ScraperRunner[] scrapers;
+        readonly IDerivedValue[] derivedValues;
 
         public Aggregator()
         {
@@ -22,6 +24,11 @@ namespace FundamentalsAggregator
                                new MorningstarForwardValuation()
                            }.Select(s => new ScraperRunner(s))
                            .ToArray();
+
+            derivedValues = new IDerivedValue[]
+                                {
+                                    new NeffTest()
+                                };
         }
 
         public AggregationResults Aggregate(TickerSymbol symbol)
@@ -42,7 +49,11 @@ namespace FundamentalsAggregator
                 .Select(p => p.Value)
                 .FirstOrDefault();
 
-            return new AggregationResults(symbol, providerResults, DateTime.UtcNow, longName);
+            var derivedValues = this.derivedValues
+                .Select(d => d.Calculate(providerResults))
+                .ToList();
+
+            return new AggregationResults(symbol, providerResults, DateTime.UtcNow, longName, derivedValues);
         }
     }
 }
